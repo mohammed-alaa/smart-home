@@ -1,5 +1,5 @@
 /************************************************************************************/
-/* File name: ASMH_progran.c                                                        */
+/* File name: ASMH_program.c                                                        */
 /* Author: Mohamed Alaa                                                             */
 /* Description: This file contains the logical operations of Smart Home Application */
 /* Date: 4/6/2021                                                                   */
