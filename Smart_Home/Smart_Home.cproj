@@ -153,7 +153,7 @@
     <Compile Include="APP\ASMH_private.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\ASMH_progran.c">
+    <Compile Include="APP\ASMH_program.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\BTH\HBTH_interface.h">
