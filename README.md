@@ -34,6 +34,17 @@ This project is developed using:
 //#define MASTER_VERSION
 ```
 
+## Bluetooth commands
+
+#### Note: Make sure there are no line-ending letter being sent.
+
+- a: Turns on LED1.
+- b: Turns off LED1.
+- c: Turns on LED2.
+- d: Turns off LED2.
+- e: Toggles LED1.
+- f: Toggles LED2.
+
 ## Static Software Architecture
 
 ![Schematic](SSA.png)
