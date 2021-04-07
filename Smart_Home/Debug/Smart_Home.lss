@@ -3,29 +3,29 @@ Smart_Home.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000026c  00000000  00000000  00000054  2**1
+  0 .text         000002a2  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  000002c0  2**0
+  1 .data         00000000  00800060  00800060  000002f6  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  000002c0  2**0
+  2 .comment      00000030  00000000  00000000  000002f6  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002f0  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000328  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000130  00000000  00000000  0000032c  2**0
+  4 .debug_aranges 00000178  00000000  00000000  00000364  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000f82  00000000  00000000  0000045c  2**0
+  5 .debug_info   00001290  00000000  00000000  000004dc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 0000097e  00000000  00000000  000013de  2**0
+  6 .debug_abbrev 00000a48  00000000  00000000  0000176c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000009a0  00000000  00000000  00001d5c  2**0
+  7 .debug_line   00000b60  00000000  00000000  000021b4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  000001e8  00000000  00000000  000026fc  2**2
+  8 .debug_frame  00000264  00000000  00000000  00002d14  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000005f1  00000000  00000000  000028e4  2**0
+  9 .debug_str    00000682  00000000  00000000  00002f78  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000a7f  00000000  00000000  00002ed5  2**0
+ 10 .debug_loc    00000c76  00000000  00000000  000035fa  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 000000d0  00000000  00000000  00003954  2**0
+ 11 .debug_ranges 00000108  00000000  00000000  00004270  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -60,8 +60,8 @@ Disassembly of section .text:
   5a:	d8 e0       	ldi	r29, 0x08	; 8
   5c:	de bf       	out	0x3e, r29	; 62
   5e:	cd bf       	out	0x3d, r28	; 61
-  60:	0e 94 80 00 	call	0x100	; 0x100 <main>
-  64:	0c 94 34 01 	jmp	0x268	; 0x268 <_exit>
+  60:	0e 94 9d 00 	call	0x13a	; 0x13a <main>
+  64:	0c 94 4f 01 	jmp	0x29e	; 0x29e <_exit>
 
 00000068 <__bad_interrupt>:
   68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -69,535 +69,604 @@ Disassembly of section .text:
 0000006c <asmh_initSpi>:
 /************************************************************************/
 
-void asmh_initSpi(u8_t au8_spiMode)
+static void asmh_initSpi(u8_t au8_spiMode)
 {
 	/* Check whether the SPI Mode is in the MASTER mode */
 	if (au8_spiMode == ASMH_SPIM_MASTER)
   6c:	81 11       	cpse	r24, r1
-  6e:	16 c0       	rjmp	.+44     	; 0x9c <asmh_initSpi+0x30>
+  6e:	11 c0       	rjmp	.+34     	; 0x92 <asmh_initSpi+0x26>
 	{
-		/* Initialize the SPI module in MASTER mode with MSB data mode, Sample on rising and setup on falling and clock speed of 16 */
-		mspi_init(MSPI_MODE_MASTER, MSPI_DMODE_MSB, MSPI_CMODE_SAMPLE_R_SETUP_F, MSPI_CLK_BY_16);
-  70:	21 e0       	ldi	r18, 0x01	; 1
-  72:	40 e0       	ldi	r20, 0x00	; 0
-  74:	60 e0       	ldi	r22, 0x00	; 0
-  76:	80 e1       	ldi	r24, 0x10	; 16
-  78:	0e 94 01 01 	call	0x202	; 0x202 <mspi_init>
-		
 		/* Set PB5 (MOSI) and PB7 (SCK) to OUTPUT */
 		mdio_setPinStatus(PORTB, (PIN5|PIN7), OUTPUT);
-  7c:	42 e0       	ldi	r20, 0x02	; 2
-  7e:	60 ea       	ldi	r22, 0xA0	; 160
-  80:	81 e0       	ldi	r24, 0x01	; 1
-  82:	0e 94 98 00 	call	0x130	; 0x130 <mdio_setPinStatus>
+  70:	42 e0       	ldi	r20, 0x02	; 2
+  72:	60 ea       	ldi	r22, 0xA0	; 160
+  74:	81 e0       	ldi	r24, 0x01	; 1
+  76:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
 		
 		/* Set PA0 (SS) to OUTPUT */
 		mdio_setPinStatus(PORTA, (PIN0), OUTPUT);
-  86:	42 e0       	ldi	r20, 0x02	; 2
-  88:	61 e0       	ldi	r22, 0x01	; 1
-  8a:	80 e0       	ldi	r24, 0x00	; 0
-  8c:	0e 94 98 00 	call	0x130	; 0x130 <mdio_setPinStatus>
+  7a:	42 e0       	ldi	r20, 0x02	; 2
+  7c:	61 e0       	ldi	r22, 0x01	; 1
+  7e:	80 e0       	ldi	r24, 0x00	; 0
+  80:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
 		
 		/* Set PB6 (MISO) to INPUT */
 		mdio_setPinStatus(PORTB, (PIN6), INPUT_FLOAT);
-  90:	40 e0       	ldi	r20, 0x00	; 0
-  92:	60 e4       	ldi	r22, 0x40	; 64
-  94:	81 e0       	ldi	r24, 0x01	; 1
-  96:	0e 94 98 00 	call	0x130	; 0x130 <mdio_setPinStatus>
-  9a:	08 95       	ret
+  84:	40 e0       	ldi	r20, 0x00	; 0
+  86:	60 e4       	ldi	r22, 0x40	; 64
+  88:	81 e0       	ldi	r24, 0x01	; 1
+  8a:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
+		
+		/* Initialize the SPI module in MASTER mode */
+		au8_spiMode = MSPI_MODE_MASTER;
+  8e:	80 e1       	ldi	r24, 0x10	; 16
+  90:	10 c0       	rjmp	.+32     	; 0xb2 <asmh_initSpi+0x46>
 	}
 	else
 	{
-		/* Initialize the SPI module in MASTER mode with MSB data mode, Sample on rising and setup on falling and clock speed of 16 */
-		mspi_init(MSPI_MODE_SLAVE, MSPI_DMODE_MSB, MSPI_CMODE_SAMPLE_R_SETUP_F, MSPI_CLK_BY_16);
-  9c:	21 e0       	ldi	r18, 0x01	; 1
-  9e:	40 e0       	ldi	r20, 0x00	; 0
-  a0:	60 e0       	ldi	r22, 0x00	; 0
-  a2:	80 e0       	ldi	r24, 0x00	; 0
-  a4:	0e 94 01 01 	call	0x202	; 0x202 <mspi_init>
-		
 		/* Set PB5 (MOSI) and PB7 (SCK) to INPUT_FLOAT */
 		mdio_setPinStatus(PORTB, (PIN5|PIN7), INPUT_FLOAT);
-  a8:	40 e0       	ldi	r20, 0x00	; 0
-  aa:	60 ea       	ldi	r22, 0xA0	; 160
-  ac:	81 e0       	ldi	r24, 0x01	; 1
-  ae:	0e 94 98 00 	call	0x130	; 0x130 <mdio_setPinStatus>
+  92:	40 e0       	ldi	r20, 0x00	; 0
+  94:	60 ea       	ldi	r22, 0xA0	; 160
+  96:	81 e0       	ldi	r24, 0x01	; 1
+  98:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
 		
 		/* Set PA0 (SS) to INPUT */
 		mdio_setPinStatus(PORTA, (PIN0), INPUT_FLOAT);
-  b2:	40 e0       	ldi	r20, 0x00	; 0
-  b4:	61 e0       	ldi	r22, 0x01	; 1
-  b6:	80 e0       	ldi	r24, 0x00	; 0
-  b8:	0e 94 98 00 	call	0x130	; 0x130 <mdio_setPinStatus>
+  9c:	40 e0       	ldi	r20, 0x00	; 0
+  9e:	61 e0       	ldi	r22, 0x01	; 1
+  a0:	80 e0       	ldi	r24, 0x00	; 0
+  a2:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
 		
 		/* Set PB6 (MISO) to OUTPUT */
 		mdio_setPinStatus(PORTB, (PIN6), OUTPUT);
-  bc:	42 e0       	ldi	r20, 0x02	; 2
-  be:	60 e4       	ldi	r22, 0x40	; 64
-  c0:	81 e0       	ldi	r24, 0x01	; 1
-  c2:	0e 94 98 00 	call	0x130	; 0x130 <mdio_setPinStatus>
-  c6:	08 95       	ret
+  a6:	42 e0       	ldi	r20, 0x02	; 2
+  a8:	60 e4       	ldi	r22, 0x40	; 64
+  aa:	81 e0       	ldi	r24, 0x01	; 1
+  ac:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
+		
+		/* Initialize the SPI module in SLAVE mode */
+		au8_spiMode = MSPI_MODE_SLAVE;
+  b0:	80 e0       	ldi	r24, 0x00	; 0
+	}
+	
+	/* Initialize the SPI module with MSB data mode, Sample on rising and setup on falling and clock speed of 16 */
+	mspi_init(au8_spiMode, MSPI_DMODE_MSB, MSPI_CMODE_SAMPLE_R_SETUP_F, MSPI_CLK_BY_16);
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	40 e0       	ldi	r20, 0x00	; 0
+  b6:	60 e0       	ldi	r22, 0x00	; 0
+  b8:	0e 94 1c 01 	call	0x238	; 0x238 <mspi_init>
+  bc:	08 95       	ret
 
-000000c8 <asmh_masterBTHRecvCmd>:
+000000be <asmh_initApp>:
 }
 
-void asmh_masterBTHRecvCmd(u8_t* pu8_data)
+void asmh_initApp(u8_t au8_mode)
+{
+  be:	cf 93       	push	r28
+  c0:	c8 2f       	mov	r28, r24
+	/* Initialize SPI module */
+	asmh_initSpi(au8_mode);
+  c2:	0e 94 36 00 	call	0x6c	; 0x6c <asmh_initSpi>
+	
+	/* Check whether the SPI Mode is in the MASTER mode */
+	if (au8_mode == ASMH_SPIM_MASTER)
+  c6:	c1 11       	cpse	r28, r1
+  c8:	03 c0       	rjmp	.+6      	; 0xd0 <asmh_initApp+0x12>
+	{
+		/* Initialize the Bluetooth module */
+		hbth_init();
+  ca:	0e 94 78 00 	call	0xf0	; 0xf0 <hbth_init>
+  ce:	06 c0       	rjmp	.+12     	; 0xdc <asmh_initApp+0x1e>
+	}
+	else
+	{
+		/* Initialize the LED1 in the LED module */
+		hled_init(HLED_LED1);
+  d0:	81 e0       	ldi	r24, 0x01	; 1
+  d2:	0e 94 8c 00 	call	0x118	; 0x118 <hled_init>
+		
+		/* Initialize the LED 2 in the LED module */
+		hled_init(HLED_LED2);
+  d6:	82 e0       	ldi	r24, 0x02	; 2
+  d8:	0e 94 8c 00 	call	0x118	; 0x118 <hled_init>
+	}
+	/* Return from this function */
+	return;
+}
+  dc:	cf 91       	pop	r28
+  de:	08 95       	ret
+
+000000e0 <asmh_masterBTHRecvCmd>:
+
+void asmh_masterBTHRecvCmd(u8_t* pu8_cmd)
 {
 	/* Receive a command over the Bluetooth module */
-	hbth_recvCmd(pu8_data);
-  c8:	0e 94 7d 00 	call	0xfa	; 0xfa <hbth_recvCmd>
-  cc:	08 95       	ret
+	hbth_recvCmd(pu8_cmd);
+  e0:	0e 94 89 00 	call	0x112	; 0x112 <hbth_recvCmd>
+  e4:	08 95       	ret
 
-000000ce <asmh_masterSPISendCmd>:
+000000e6 <asmh_masterSPISendCmd>:
 }
 
-void asmh_masterSPISendCmd(u8_t au8_data)
+void asmh_masterSPISendCmd(u8_t au8_cmd)
 {
 	/* Send the 1-byte data from the MASTER to the SLAVE with ignoring the received data from the SLAVE */
-	mspi_masterSendRecvByte(au8_data, 0x00);
-  ce:	60 e0       	ldi	r22, 0x00	; 0
-  d0:	70 e0       	ldi	r23, 0x00	; 0
-  d2:	0e 94 0c 01 	call	0x218	; 0x218 <mspi_masterSendRecvByte>
-  d6:	08 95       	ret
+	mspi_masterSendRecvByte(au8_cmd, 0x00);
+  e6:	60 e0       	ldi	r22, 0x00	; 0
+  e8:	70 e0       	ldi	r23, 0x00	; 0
+  ea:	0e 94 27 01 	call	0x24e	; 0x24e <mspi_masterSendRecvByte>
+  ee:	08 95       	ret
 
-000000d8 <hbth_init>:
+000000f0 <hbth_init>:
 /*                         Functions' definitions                       */
 /************************************************************************/
 void hbth_init(void)
 {
-	// Set the RX pin as input
+	/* Set the RX pin as input */
 	mdio_setPinStatus(PORTD, PIN0, INPUT_FLOAT);
-  d8:	40 e0       	ldi	r20, 0x00	; 0
-  da:	61 e0       	ldi	r22, 0x01	; 1
-  dc:	83 e0       	ldi	r24, 0x03	; 3
-  de:	0e 94 98 00 	call	0x130	; 0x130 <mdio_setPinStatus>
+  f0:	40 e0       	ldi	r20, 0x00	; 0
+  f2:	61 e0       	ldi	r22, 0x01	; 1
+  f4:	83 e0       	ldi	r24, 0x03	; 3
+  f6:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
 	
-	// Set the TX pin as output
+	/* Set the TX pin as output */
 	mdio_setPinStatus(PORTD, PIN1, OUTPUT);
-  e2:	42 e0       	ldi	r20, 0x02	; 2
-  e4:	62 e0       	ldi	r22, 0x02	; 2
-  e6:	83 e0       	ldi	r24, 0x03	; 3
-  e8:	0e 94 98 00 	call	0x130	; 0x130 <mdio_setPinStatus>
+  fa:	42 e0       	ldi	r20, 0x02	; 2
+  fc:	62 e0       	ldi	r22, 0x02	; 2
+  fe:	83 e0       	ldi	r24, 0x03	; 3
+ 100:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
 	
-	// Initialize the UART module with 9600 baud rate
+	/* Initialize the UART module with 9600 baud rate */
 	muart_init(MUART_BAUDRATE_9600);
-  ec:	87 e6       	ldi	r24, 0x67	; 103
-  ee:	0e 94 1c 01 	call	0x238	; 0x238 <muart_init>
-  f2:	08 95       	ret
+ 104:	87 e6       	ldi	r24, 0x67	; 103
+ 106:	0e 94 37 01 	call	0x26e	; 0x26e <muart_init>
+ 10a:	08 95       	ret
 
-000000f4 <hbth_dataExists>:
+0000010c <hbth_dataExists>:
 }
 
 u8_t hbth_dataExists(void)
 {
-	// Return whether there is a new data exists or not */
+	/* Return whether there is a new data exists or not */
 	return muart_dataExists();
-  f4:	0e 94 23 01 	call	0x246	; 0x246 <muart_dataExists>
+ 10c:	0e 94 3e 01 	call	0x27c	; 0x27c <muart_dataExists>
 }
-  f8:	08 95       	ret
+ 110:	08 95       	ret
 
-000000fa <hbth_recvCmd>:
+00000112 <hbth_recvCmd>:
 
 void hbth_recvCmd(u8_t* pu8_dataByte)
 {
-	// Return the received data
+	/* Return the received data */
 	muart_recvByte(pu8_dataByte);
-  fa:	0e 94 28 01 	call	0x250	; 0x250 <muart_recvByte>
-  fe:	08 95       	ret
+ 112:	0e 94 43 01 	call	0x286	; 0x286 <muart_recvByte>
+ 116:	08 95       	ret
 
-00000100 <main>:
+00000118 <hled_init>:
+/*                         Functions' definitions                       */
+/************************************************************************/
 
-/* Uncomment below line/macro if the compiled version is going to be for the MASTER microcontroller */
-#define MASTER_VERSION
+void hled_init(u8_t au8_led)
+{
+	switch (au8_led)
+ 118:	81 30       	cpi	r24, 0x01	; 1
+ 11a:	19 f0       	breq	.+6      	; 0x122 <hled_init+0xa>
+ 11c:	82 30       	cpi	r24, 0x02	; 2
+ 11e:	39 f0       	breq	.+14     	; 0x12e <hled_init+0x16>
+ 120:	08 95       	ret
+	{
+		/* In case of LED1 */
+		case HLED_LED1:
+			/* Set PD0 to OUTPUT */
+			mdio_setPinStatus(PORTD, PIN0, OUTPUT);
+ 122:	42 e0       	ldi	r20, 0x02	; 2
+ 124:	61 e0       	ldi	r22, 0x01	; 1
+ 126:	83 e0       	ldi	r24, 0x03	; 3
+ 128:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
+		
+			/* Break from this case */
+			break;
+ 12c:	08 95       	ret
+		/* In case of LED2 */
+		case HLED_LED2:
+			/* Set PD1 to OUTPUT */
+			mdio_setPinStatus(PORTD, PIN1, OUTPUT);
+ 12e:	42 e0       	ldi	r20, 0x02	; 2
+ 130:	62 e0       	ldi	r22, 0x02	; 2
+ 132:	83 e0       	ldi	r24, 0x03	; 3
+ 134:	0e 94 b3 00 	call	0x166	; 0x166 <mdio_setPinStatus>
+ 138:	08 95       	ret
 
+0000013a <main>:
+ * @brief  Main function
+ *
+ * @return int 0 on successful execution of the program, anything else on errors
+ */
 int main(void)
 {
- 100:	cf 93       	push	r28
- 102:	df 93       	push	r29
- 104:	1f 92       	push	r1
- 106:	cd b7       	in	r28, 0x3d	; 61
- 108:	de b7       	in	r29, 0x3e	; 62
+ 13a:	cf 93       	push	r28
+ 13c:	df 93       	push	r29
+ 13e:	1f 92       	push	r1
+ 140:	cd b7       	in	r28, 0x3d	; 61
+ 142:	de b7       	in	r29, 0x3e	; 62
 	/* If the output compiled version is going to be for the MASTER microcontroller */
 	#if defined MASTER_VERSION
 		/* A local variable to store the received data over the Bluetooth module */
 		u8_t au8_BthData = 0;
- 10a:	19 82       	std	Y+1, r1	; 0x01
+ 144:	19 82       	std	Y+1, r1	; 0x01
 		
-		/* Initialize Bluetooth module */
-		hbth_init();
- 10c:	0e 94 6c 00 	call	0xd8	; 0xd8 <hbth_init>
-	
-		/* Initialize SPI module as MASTER mode with MSB data mode, sample on rising setup on falling and clock speed by 16 */
-		asmh_initSpi(ASMH_SPIM_MASTER);
- 110:	80 e0       	ldi	r24, 0x00	; 0
- 112:	0e 94 36 00 	call	0x6c	; 0x6c <asmh_initSpi>
+		/* Initialize the application is MASTER mode */
+		asmh_initApp(ASMH_SPIM_MASTER);
+ 146:	80 e0       	ldi	r24, 0x00	; 0
+ 148:	0e 94 5f 00 	call	0xbe	; 0xbe <asmh_initApp>
     while (1)
     {
 		/* If the output compiled version is going to be for the MASTER microcontroller */
 		#if defined MASTER_VERSION
 			/* Checking whether there is a new received data */
 			if (hbth_dataExists())
- 116:	0e 94 7a 00 	call	0xf4	; 0xf4 <hbth_dataExists>
- 11a:	88 23       	and	r24, r24
- 11c:	e1 f3       	breq	.-8      	; 0x116 <main+0x16>
+ 14c:	0e 94 86 00 	call	0x10c	; 0x10c <hbth_dataExists>
+ 150:	88 23       	and	r24, r24
+ 152:	e1 f3       	breq	.-8      	; 0x14c <main+0x12>
 			{
 				/* Get and store the received data over the Bluetooth module */
 				asmh_masterBTHRecvCmd(&au8_BthData);
- 11e:	ce 01       	movw	r24, r28
- 120:	01 96       	adiw	r24, 0x01	; 1
- 122:	0e 94 64 00 	call	0xc8	; 0xc8 <asmh_masterBTHRecvCmd>
+ 154:	ce 01       	movw	r24, r28
+ 156:	01 96       	adiw	r24, 0x01	; 1
+ 158:	0e 94 70 00 	call	0xe0	; 0xe0 <asmh_masterBTHRecvCmd>
 				
 				/* Send the received Bluetooth data to the SLAVE over the SPI */
 				asmh_masterSPISendCmd(au8_BthData);
- 126:	89 81       	ldd	r24, Y+1	; 0x01
- 128:	0e 94 67 00 	call	0xce	; 0xce <asmh_masterSPISendCmd>
+ 15c:	89 81       	ldd	r24, Y+1	; 0x01
+ 15e:	0e 94 73 00 	call	0xe6	; 0xe6 <asmh_masterSPISendCmd>
 				
 				/* Reset the received data over the Bluetooth module so it doesn't cause issues */
 				au8_BthData = 0;
- 12c:	19 82       	std	Y+1, r1	; 0x01
- 12e:	f3 cf       	rjmp	.-26     	; 0x116 <main+0x16>
+ 162:	19 82       	std	Y+1, r1	; 0x01
+ 164:	f3 cf       	rjmp	.-26     	; 0x14c <main+0x12>
 
-00000130 <mdio_setPinStatus>:
+00000166 <mdio_setPinStatus>:
 /************************************************************************/
 
 void mdio_setPinStatus(u8_t au8_port, u8_t au8_pin, u8_t au8_pinStatus)
 {
 	/* Switching over the DIO ports */
 	switch(au8_port)
- 130:	81 30       	cpi	r24, 0x01	; 1
- 132:	f9 f0       	breq	.+62     	; 0x172 <mdio_setPinStatus+0x42>
- 134:	30 f0       	brcs	.+12     	; 0x142 <mdio_setPinStatus+0x12>
- 136:	82 30       	cpi	r24, 0x02	; 2
- 138:	a1 f1       	breq	.+104    	; 0x1a2 <mdio_setPinStatus+0x72>
- 13a:	83 30       	cpi	r24, 0x03	; 3
- 13c:	09 f4       	brne	.+2      	; 0x140 <mdio_setPinStatus+0x10>
- 13e:	49 c0       	rjmp	.+146    	; 0x1d2 <mdio_setPinStatus+0xa2>
- 140:	08 95       	ret
+ 166:	81 30       	cpi	r24, 0x01	; 1
+ 168:	f9 f0       	breq	.+62     	; 0x1a8 <mdio_setPinStatus+0x42>
+ 16a:	30 f0       	brcs	.+12     	; 0x178 <mdio_setPinStatus+0x12>
+ 16c:	82 30       	cpi	r24, 0x02	; 2
+ 16e:	a1 f1       	breq	.+104    	; 0x1d8 <mdio_setPinStatus+0x72>
+ 170:	83 30       	cpi	r24, 0x03	; 3
+ 172:	09 f4       	brne	.+2      	; 0x176 <mdio_setPinStatus+0x10>
+ 174:	49 c0       	rjmp	.+146    	; 0x208 <mdio_setPinStatus+0xa2>
+ 176:	08 95       	ret
 	{
 		/* In case of PORTA */
 		case PORTA:
 			/* Switching over pin status */
 			switch(au8_pinStatus)
- 142:	41 30       	cpi	r20, 0x01	; 1
- 144:	49 f0       	breq	.+18     	; 0x158 <mdio_setPinStatus+0x28>
- 146:	18 f0       	brcs	.+6      	; 0x14e <mdio_setPinStatus+0x1e>
- 148:	42 30       	cpi	r20, 0x02	; 2
- 14a:	79 f0       	breq	.+30     	; 0x16a <mdio_setPinStatus+0x3a>
- 14c:	08 95       	ret
+ 178:	41 30       	cpi	r20, 0x01	; 1
+ 17a:	49 f0       	breq	.+18     	; 0x18e <mdio_setPinStatus+0x28>
+ 17c:	18 f0       	brcs	.+6      	; 0x184 <mdio_setPinStatus+0x1e>
+ 17e:	42 30       	cpi	r20, 0x02	; 2
+ 180:	79 f0       	breq	.+30     	; 0x1a0 <mdio_setPinStatus+0x3a>
+ 182:	08 95       	ret
 			{
 				/* In case of input float */
 				case INPUT_FLOAT:
 					/* Clearing the corresponding pin in DDRA register */
 					MDIO_DDRA &= ~au8_pin;
- 14e:	8a b3       	in	r24, 0x1a	; 26
- 150:	60 95       	com	r22
- 152:	68 23       	and	r22, r24
- 154:	6a bb       	out	0x1a, r22	; 26
+ 184:	8a b3       	in	r24, 0x1a	; 26
+ 186:	60 95       	com	r22
+ 188:	68 23       	and	r22, r24
+ 18a:	6a bb       	out	0x1a, r22	; 26
 					break;
- 156:	08 95       	ret
+ 18c:	08 95       	ret
 				/* In case of input pull up */
 				case INPUT_PULLUP:
 					/* Clearing the corresponding pin in DDRA register */
 					MDIO_DDRA &= ~au8_pin;
- 158:	8a b3       	in	r24, 0x1a	; 26
- 15a:	96 2f       	mov	r25, r22
- 15c:	90 95       	com	r25
- 15e:	89 23       	and	r24, r25
- 160:	8a bb       	out	0x1a, r24	; 26
+ 18e:	8a b3       	in	r24, 0x1a	; 26
+ 190:	96 2f       	mov	r25, r22
+ 192:	90 95       	com	r25
+ 194:	89 23       	and	r24, r25
+ 196:	8a bb       	out	0x1a, r24	; 26
 					/*  Setting the corresponding bits in PORTA register */
 					MDIO_PORTA |= au8_pin;
- 162:	8b b3       	in	r24, 0x1b	; 27
- 164:	68 2b       	or	r22, r24
- 166:	6b bb       	out	0x1b, r22	; 27
+ 198:	8b b3       	in	r24, 0x1b	; 27
+ 19a:	68 2b       	or	r22, r24
+ 19c:	6b bb       	out	0x1b, r22	; 27
 					break;
- 168:	08 95       	ret
+ 19e:	08 95       	ret
 				/* In case of output */
 				case OUTPUT:
 					/*  Setting the corresponding bits in PORTA register */
 					MDIO_DDRA |= au8_pin;
- 16a:	8a b3       	in	r24, 0x1a	; 26
- 16c:	68 2b       	or	r22, r24
- 16e:	6a bb       	out	0x1a, r22	; 26
+ 1a0:	8a b3       	in	r24, 0x1a	; 26
+ 1a2:	68 2b       	or	r22, r24
+ 1a4:	6a bb       	out	0x1a, r22	; 26
 					break;
- 170:	08 95       	ret
+ 1a6:	08 95       	ret
 			}
 			break;
 		/* In case of PORTB */
 		case PORTB:
 			/* Switching over pin status */
 			switch(au8_pinStatus)
- 172:	41 30       	cpi	r20, 0x01	; 1
- 174:	49 f0       	breq	.+18     	; 0x188 <mdio_setPinStatus+0x58>
- 176:	18 f0       	brcs	.+6      	; 0x17e <mdio_setPinStatus+0x4e>
- 178:	42 30       	cpi	r20, 0x02	; 2
- 17a:	79 f0       	breq	.+30     	; 0x19a <mdio_setPinStatus+0x6a>
- 17c:	08 95       	ret
+ 1a8:	41 30       	cpi	r20, 0x01	; 1
+ 1aa:	49 f0       	breq	.+18     	; 0x1be <mdio_setPinStatus+0x58>
+ 1ac:	18 f0       	brcs	.+6      	; 0x1b4 <mdio_setPinStatus+0x4e>
+ 1ae:	42 30       	cpi	r20, 0x02	; 2
+ 1b0:	79 f0       	breq	.+30     	; 0x1d0 <mdio_setPinStatus+0x6a>
+ 1b2:	08 95       	ret
 			{
 				/* In case of input float */
 				case INPUT_FLOAT:
 					/* Clearing the corresponding pin in DDRB register */
 					MDIO_DDRB &= ~au8_pin;
- 17e:	87 b3       	in	r24, 0x17	; 23
- 180:	60 95       	com	r22
- 182:	68 23       	and	r22, r24
- 184:	67 bb       	out	0x17, r22	; 23
+ 1b4:	87 b3       	in	r24, 0x17	; 23
+ 1b6:	60 95       	com	r22
+ 1b8:	68 23       	and	r22, r24
+ 1ba:	67 bb       	out	0x17, r22	; 23
 					break;
- 186:	08 95       	ret
+ 1bc:	08 95       	ret
 				/* In case of input pull up */
 				case INPUT_PULLUP:
 					/* Clearing the corresponding pin in DDRB register */
 					MDIO_DDRB &= ~au8_pin;
- 188:	87 b3       	in	r24, 0x17	; 23
- 18a:	96 2f       	mov	r25, r22
- 18c:	90 95       	com	r25
- 18e:	89 23       	and	r24, r25
- 190:	87 bb       	out	0x17, r24	; 23
+ 1be:	87 b3       	in	r24, 0x17	; 23
+ 1c0:	96 2f       	mov	r25, r22
+ 1c2:	90 95       	com	r25
+ 1c4:	89 23       	and	r24, r25
+ 1c6:	87 bb       	out	0x17, r24	; 23
 					/*  Setting the corresponding bits in PORTB register */
 					MDIO_PORTB |= au8_pin;
- 192:	88 b3       	in	r24, 0x18	; 24
- 194:	68 2b       	or	r22, r24
- 196:	68 bb       	out	0x18, r22	; 24
+ 1c8:	88 b3       	in	r24, 0x18	; 24
+ 1ca:	68 2b       	or	r22, r24
+ 1cc:	68 bb       	out	0x18, r22	; 24
 					break;
- 198:	08 95       	ret
+ 1ce:	08 95       	ret
 				/* In case of output */
 				case OUTPUT:
 					/*  Setting the corresponding bits in PORTB register */
 					MDIO_DDRB |= au8_pin;
- 19a:	87 b3       	in	r24, 0x17	; 23
- 19c:	68 2b       	or	r22, r24
- 19e:	67 bb       	out	0x17, r22	; 23
+ 1d0:	87 b3       	in	r24, 0x17	; 23
+ 1d2:	68 2b       	or	r22, r24
+ 1d4:	67 bb       	out	0x17, r22	; 23
 					break;
- 1a0:	08 95       	ret
+ 1d6:	08 95       	ret
 			}
 			break;
 		/* In case of PORTC */
 		case PORTC:
 			/* Switching over pin status */
 			switch(au8_pinStatus)
- 1a2:	41 30       	cpi	r20, 0x01	; 1
- 1a4:	49 f0       	breq	.+18     	; 0x1b8 <mdio_setPinStatus+0x88>
- 1a6:	18 f0       	brcs	.+6      	; 0x1ae <mdio_setPinStatus+0x7e>
- 1a8:	42 30       	cpi	r20, 0x02	; 2
- 1aa:	79 f0       	breq	.+30     	; 0x1ca <mdio_setPinStatus+0x9a>
- 1ac:	08 95       	ret
+ 1d8:	41 30       	cpi	r20, 0x01	; 1
+ 1da:	49 f0       	breq	.+18     	; 0x1ee <mdio_setPinStatus+0x88>
+ 1dc:	18 f0       	brcs	.+6      	; 0x1e4 <mdio_setPinStatus+0x7e>
+ 1de:	42 30       	cpi	r20, 0x02	; 2
+ 1e0:	79 f0       	breq	.+30     	; 0x200 <mdio_setPinStatus+0x9a>
+ 1e2:	08 95       	ret
 			{
 				/* In case of input float */
 				case INPUT_FLOAT:
 					/* Clearing the corresponding pin in DDRA register */
 					MDIO_DDRC &= ~au8_pin;
- 1ae:	84 b3       	in	r24, 0x14	; 20
- 1b0:	60 95       	com	r22
- 1b2:	68 23       	and	r22, r24
- 1b4:	64 bb       	out	0x14, r22	; 20
+ 1e4:	84 b3       	in	r24, 0x14	; 20
+ 1e6:	60 95       	com	r22
+ 1e8:	68 23       	and	r22, r24
+ 1ea:	64 bb       	out	0x14, r22	; 20
 					break;
- 1b6:	08 95       	ret
+ 1ec:	08 95       	ret
 				/* In case of input pull up */
 				case INPUT_PULLUP:
 					/* Clearing the corresponding pin in DDRA register */
 					MDIO_DDRC &= ~au8_pin;
- 1b8:	84 b3       	in	r24, 0x14	; 20
- 1ba:	96 2f       	mov	r25, r22
- 1bc:	90 95       	com	r25
- 1be:	89 23       	and	r24, r25
- 1c0:	84 bb       	out	0x14, r24	; 20
+ 1ee:	84 b3       	in	r24, 0x14	; 20
+ 1f0:	96 2f       	mov	r25, r22
+ 1f2:	90 95       	com	r25
+ 1f4:	89 23       	and	r24, r25
+ 1f6:	84 bb       	out	0x14, r24	; 20
 					/*  Setting the corresponding bits in PORTC register */
 					MDIO_PORTC |= au8_pin;
- 1c2:	85 b3       	in	r24, 0x15	; 21
- 1c4:	68 2b       	or	r22, r24
- 1c6:	65 bb       	out	0x15, r22	; 21
+ 1f8:	85 b3       	in	r24, 0x15	; 21
+ 1fa:	68 2b       	or	r22, r24
+ 1fc:	65 bb       	out	0x15, r22	; 21
 					break;
- 1c8:	08 95       	ret
+ 1fe:	08 95       	ret
 				/* In case of output */
 				case OUTPUT:
 					/*  Setting the corresponding bits in PORTC register */
 					MDIO_DDRC |= au8_pin;
- 1ca:	84 b3       	in	r24, 0x14	; 20
- 1cc:	68 2b       	or	r22, r24
- 1ce:	64 bb       	out	0x14, r22	; 20
+ 200:	84 b3       	in	r24, 0x14	; 20
+ 202:	68 2b       	or	r22, r24
+ 204:	64 bb       	out	0x14, r22	; 20
 					break;
- 1d0:	08 95       	ret
+ 206:	08 95       	ret
 			}
 			break;
 		/* In case of PORTD */
 		case PORTD:
 			/* Switching over pin status */
 			switch(au8_pinStatus)
- 1d2:	41 30       	cpi	r20, 0x01	; 1
- 1d4:	49 f0       	breq	.+18     	; 0x1e8 <mdio_setPinStatus+0xb8>
- 1d6:	18 f0       	brcs	.+6      	; 0x1de <mdio_setPinStatus+0xae>
- 1d8:	42 30       	cpi	r20, 0x02	; 2
- 1da:	79 f0       	breq	.+30     	; 0x1fa <mdio_setPinStatus+0xca>
- 1dc:	08 95       	ret
+ 208:	41 30       	cpi	r20, 0x01	; 1
+ 20a:	49 f0       	breq	.+18     	; 0x21e <mdio_setPinStatus+0xb8>
+ 20c:	18 f0       	brcs	.+6      	; 0x214 <mdio_setPinStatus+0xae>
+ 20e:	42 30       	cpi	r20, 0x02	; 2
+ 210:	79 f0       	breq	.+30     	; 0x230 <mdio_setPinStatus+0xca>
+ 212:	08 95       	ret
 			{
 				/* In case of input float */
 				case INPUT_FLOAT:
 					/* Clearing the corresponding pin in DDRD register */
 					MDIO_DDRD &= ~au8_pin;
- 1de:	81 b3       	in	r24, 0x11	; 17
- 1e0:	60 95       	com	r22
- 1e2:	68 23       	and	r22, r24
- 1e4:	61 bb       	out	0x11, r22	; 17
+ 214:	81 b3       	in	r24, 0x11	; 17
+ 216:	60 95       	com	r22
+ 218:	68 23       	and	r22, r24
+ 21a:	61 bb       	out	0x11, r22	; 17
 					break;
- 1e6:	08 95       	ret
+ 21c:	08 95       	ret
 				/* In case of input pull up */
 				case INPUT_PULLUP:
 					/* Clearing the corresponding pin in DDRD register */
 					MDIO_DDRD &= ~au8_pin;
- 1e8:	81 b3       	in	r24, 0x11	; 17
- 1ea:	96 2f       	mov	r25, r22
- 1ec:	90 95       	com	r25
- 1ee:	89 23       	and	r24, r25
- 1f0:	81 bb       	out	0x11, r24	; 17
+ 21e:	81 b3       	in	r24, 0x11	; 17
+ 220:	96 2f       	mov	r25, r22
+ 222:	90 95       	com	r25
+ 224:	89 23       	and	r24, r25
+ 226:	81 bb       	out	0x11, r24	; 17
 					/*  Setting the corresponding bits in PORTD register */
 					MDIO_PORTD |= au8_pin;
- 1f2:	82 b3       	in	r24, 0x12	; 18
- 1f4:	68 2b       	or	r22, r24
- 1f6:	62 bb       	out	0x12, r22	; 18
+ 228:	82 b3       	in	r24, 0x12	; 18
+ 22a:	68 2b       	or	r22, r24
+ 22c:	62 bb       	out	0x12, r22	; 18
 					break;
- 1f8:	08 95       	ret
+ 22e:	08 95       	ret
 				/* In case of output */
 				case OUTPUT:
 					/*  Setting the corresponding bits in PORTD register */
 					MDIO_DDRD |= au8_pin;
- 1fa:	81 b3       	in	r24, 0x11	; 17
- 1fc:	68 2b       	or	r22, r24
- 1fe:	61 bb       	out	0x11, r22	; 17
- 200:	08 95       	ret
+ 230:	81 b3       	in	r24, 0x11	; 17
+ 232:	68 2b       	or	r22, r24
+ 234:	61 bb       	out	0x11, r22	; 17
+ 236:	08 95       	ret
 
-00000202 <mspi_init>:
+00000238 <mspi_init>:
 /*                         Functions' definitions                       */
 /************************************************************************/
 void mspi_init(u8_t au8_spiMode, u8_t au8_dataOutMode, u8_t au8_clockMode, u8_t au8_spiSpeed)
 {
 	/* Enable the SPI mode, set the data out mode, SPI mode, clock mode & SPI speed */
 	MSPI_SPCR = (0x40) | au8_dataOutMode | au8_spiMode | au8_clockMode | au8_spiSpeed;
- 202:	86 2b       	or	r24, r22
- 204:	48 2b       	or	r20, r24
- 206:	42 2b       	or	r20, r18
- 208:	40 64       	ori	r20, 0x40	; 64
- 20a:	4d b9       	out	0x0d, r20	; 13
+ 238:	86 2b       	or	r24, r22
+ 23a:	48 2b       	or	r20, r24
+ 23c:	42 2b       	or	r20, r18
+ 23e:	40 64       	ori	r20, 0x40	; 64
+ 240:	4d b9       	out	0x0d, r20	; 13
 	
 	/* (En/Dis)able the SPI2X bit based on the SPI speed */
 	MSPI_SPSR = (au8_spiSpeed >> 6);
- 20c:	22 95       	swap	r18
- 20e:	26 95       	lsr	r18
- 210:	26 95       	lsr	r18
- 212:	23 70       	andi	r18, 0x03	; 3
- 214:	2e b9       	out	0x0e, r18	; 14
- 216:	08 95       	ret
+ 242:	22 95       	swap	r18
+ 244:	26 95       	lsr	r18
+ 246:	26 95       	lsr	r18
+ 248:	23 70       	andi	r18, 0x03	; 3
+ 24a:	2e b9       	out	0x0e, r18	; 14
+ 24c:	08 95       	ret
 
-00000218 <mspi_masterSendRecvByte>:
+0000024e <mspi_masterSendRecvByte>:
 {
 	/* Local variable for timing out operation */
 	u8_t au8_timeOut = 0;
 	
 	/* Send the new data through SPI bus from master to slave */
 	MSPI_SPDR = au8_sendData;
- 218:	8f b9       	out	0x0f, r24	; 15
+ 24e:	8f b9       	out	0x0f, r24	; 15
 }
 
 void mspi_masterSendRecvByte(u8_t au8_sendData, u8_t* pu8_recvData)
 {
 	/* Local variable for timing out operation */
 	u8_t au8_timeOut = 0;
- 21a:	80 e0       	ldi	r24, 0x00	; 0
+ 250:	80 e0       	ldi	r24, 0x00	; 0
 	
 	/* Send the new data through SPI bus from master to slave */
 	MSPI_SPDR = au8_sendData;
 	
 	/* Wait for the data to be transmitted or a timeout occurs */
 	while ((!GET_BIT(MSPI_SPSR, 7)) && (au8_timeOut < TIMEOUT_DELAY))
- 21c:	05 c0       	rjmp	.+10     	; 0x228 <mspi_masterSendRecvByte+0x10>
+ 252:	05 c0       	rjmp	.+10     	; 0x25e <mspi_masterSendRecvByte+0x10>
 	{
 		/* Increase the timeout variable */
 		au8_timeOut++;
- 21e:	8f 5f       	subi	r24, 0xFF	; 255
+ 254:	8f 5f       	subi	r24, 0xFF	; 255
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 220:	95 e0       	ldi	r25, 0x05	; 5
- 222:	9a 95       	dec	r25
- 224:	f1 f7       	brne	.-4      	; 0x222 <mspi_masterSendRecvByte+0xa>
- 226:	00 00       	nop
+ 256:	95 e0       	ldi	r25, 0x05	; 5
+ 258:	9a 95       	dec	r25
+ 25a:	f1 f7       	brne	.-4      	; 0x258 <mspi_masterSendRecvByte+0xa>
+ 25c:	00 00       	nop
 	
 	/* Send the new data through SPI bus from master to slave */
 	MSPI_SPDR = au8_sendData;
 	
 	/* Wait for the data to be transmitted or a timeout occurs */
 	while ((!GET_BIT(MSPI_SPSR, 7)) && (au8_timeOut < TIMEOUT_DELAY))
- 228:	77 99       	sbic	0x0e, 7	; 14
- 22a:	02 c0       	rjmp	.+4      	; 0x230 <mspi_masterSendRecvByte+0x18>
- 22c:	84 36       	cpi	r24, 0x64	; 100
- 22e:	b8 f3       	brcs	.-18     	; 0x21e <mspi_masterSendRecvByte+0x6>
+ 25e:	77 99       	sbic	0x0e, 7	; 14
+ 260:	02 c0       	rjmp	.+4      	; 0x266 <mspi_masterSendRecvByte+0x18>
+ 262:	84 36       	cpi	r24, 0x64	; 100
+ 264:	b8 f3       	brcs	.-18     	; 0x254 <mspi_masterSendRecvByte+0x6>
 		/* Delay for 1us */
 		_delay_us(1);
 	}
 	
 	/* Return the received data from the slave to the master */
 	*pu8_recvData = MSPI_SPDR;
- 230:	8f b1       	in	r24, 0x0f	; 15
- 232:	fb 01       	movw	r30, r22
- 234:	80 83       	st	Z, r24
- 236:	08 95       	ret
+ 266:	8f b1       	in	r24, 0x0f	; 15
+ 268:	fb 01       	movw	r30, r22
+ 26a:	80 83       	st	Z, r24
+ 26c:	08 95       	ret
 
-00000238 <muart_init>:
+0000026e <muart_init>:
 		muart_sendByte(pu8_dataStream[au8_index]);
 	}
 	
 	/* Return from this function */
 	return;
 }
- 238:	98 e1       	ldi	r25, 0x18	; 24
- 23a:	9a b9       	out	0x0a, r25	; 10
- 23c:	96 e8       	ldi	r25, 0x86	; 134
- 23e:	90 bd       	out	0x20, r25	; 32
- 240:	89 b9       	out	0x09, r24	; 9
- 242:	10 bc       	out	0x20, r1	; 32
- 244:	08 95       	ret
+ 26e:	98 e1       	ldi	r25, 0x18	; 24
+ 270:	9a b9       	out	0x0a, r25	; 10
+ 272:	96 e8       	ldi	r25, 0x86	; 134
+ 274:	90 bd       	out	0x20, r25	; 32
+ 276:	89 b9       	out	0x09, r24	; 9
+ 278:	10 bc       	out	0x20, r1	; 32
+ 27a:	08 95       	ret
 
-00000246 <muart_dataExists>:
+0000027c <muart_dataExists>:
 
 u8_t muart_dataExists(void)
 {
 	return (u8_t) GET_BIT(MUART_UCSRA, 7);
- 246:	8b b1       	in	r24, 0x0b	; 11
+ 27c:	8b b1       	in	r24, 0x0b	; 11
 }
- 248:	88 1f       	adc	r24, r24
- 24a:	88 27       	eor	r24, r24
- 24c:	88 1f       	adc	r24, r24
- 24e:	08 95       	ret
+ 27e:	88 1f       	adc	r24, r24
+ 280:	88 27       	eor	r24, r24
+ 282:	88 1f       	adc	r24, r24
+ 284:	08 95       	ret
 
-00000250 <muart_recvByte>:
+00000286 <muart_recvByte>:
 
 void muart_recvByte(u8_t* pu8_dataByte)
 {
- 250:	cf 93       	push	r28
- 252:	df 93       	push	r29
- 254:	ec 01       	movw	r28, r24
+ 286:	cf 93       	push	r28
+ 288:	df 93       	push	r29
+ 28a:	ec 01       	movw	r28, r24
 	/* Checking if there's any received data in UDR register */
 	if (muart_dataExists())
- 256:	0e 94 23 01 	call	0x246	; 0x246 <muart_dataExists>
- 25a:	88 23       	and	r24, r24
- 25c:	11 f0       	breq	.+4      	; 0x262 <muart_recvByte+0x12>
+ 28c:	0e 94 3e 01 	call	0x27c	; 0x27c <muart_dataExists>
+ 290:	88 23       	and	r24, r24
+ 292:	11 f0       	breq	.+4      	; 0x298 <muart_recvByte+0x12>
 	{
 		/* Store the received data */
 		*pu8_dataByte = MUART_UDR;
- 25e:	8c b1       	in	r24, 0x0c	; 12
- 260:	88 83       	st	Y, r24
+ 294:	8c b1       	in	r24, 0x0c	; 12
+ 296:	88 83       	st	Y, r24
 		/* Do nothing */
 	}
 	
 	/* Return from this function */
 	return;
- 262:	df 91       	pop	r29
- 264:	cf 91       	pop	r28
- 266:	08 95       	ret
+ 298:	df 91       	pop	r29
+ 29a:	cf 91       	pop	r28
+ 29c:	08 95       	ret
 
-00000268 <_exit>:
- 268:	f8 94       	cli
+0000029e <_exit>:
+ 29e:	f8 94       	cli
 
-0000026a <__stop_program>:
- 26a:	ff cf       	rjmp	.-2      	; 0x26a <__stop_program>
+000002a0 <__stop_program>:
+ 2a0:	ff cf       	rjmp	.-2      	; 0x2a0 <__stop_program>

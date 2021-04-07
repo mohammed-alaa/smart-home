@@ -1,0 +1,37 @@
+\label{index_md_D__Working_Directory_Smart_Home_README}%
+\Hypertarget{index_md_D__Working_Directory_Smart_Home_README}%
+ Smart home application is a project based on ATMEGA32 and Bluetooth where we want to control home appliance wirelessly using Mobile App via Bluetooth.\hypertarget{index_autotoc_md1}{}\doxysection{Project Description}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item This project is Smart Home based on Bluetooth where we want to control home appliance wirelessly using Mobile App via Bluetooth.
+\item Two ECU’s Communicate with each other the first is a control ECU which takes the input from Bluetooth and sends it to the Sink (Actuator) ECU via SPI to interpret which action should be taken.
+\end{DoxyItemize}
+
+This project is developed using\+:
+
+
+\begin{DoxyItemize}
+\item Micro controller ATMEGA32
+\item Bluetooth HC-\/05
+\item Basic LEDs
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{Bluetooth commands}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item a\+: Turns on LED1.
+\item b\+: Turns off LED1.
+\item c\+: Turns on LED2.
+\item d\+: Turns off LED2.
+\item e\+: Toggles LED1.
+\item f\+: Toggles LED2.
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysubsubsection{Note\+: Make sure there are no line-\/ending letter being sent.}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysection{Static Software Architecture}\label{index_autotoc_md4}
+
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{SSA.png}%Schematic
+\end{DoxyInlineImage}
+\hypertarget{index_autotoc_md5}{}\doxysection{Schematic}\label{index_autotoc_md5}
+
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{Schematic.png}%Schematic
+\end{DoxyInlineImage}
+ 

@@ -1,9 +1,12 @@
-/***********************************************************************************/
-/* File name: HBTH_private.h                                                       */
-/* Author: Mohamed Alaa                                                            */
-/* Description: This file contains the private information of Bluetooth Module     */
-/* Date: 4/3/2021                                                                  */
-/***********************************************************************************/
+/**
+ * @file    HBTH_private.h
+ * @author  Mohamed Alaa
+ * @brief   This file contains the private information of Bluetooth Module
+ * @date    2021/04/06
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
 
 /* Header file guard */
 #ifndef HBTH_PRIVATE_H_

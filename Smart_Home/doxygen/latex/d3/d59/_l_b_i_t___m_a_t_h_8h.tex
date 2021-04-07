@@ -1,0 +1,63 @@
+\hypertarget{_l_b_i_t___m_a_t_h_8h}{}\doxysection{LIBS/\+LBIT\+\_\+\+MATH.h File Reference}
+\label{_l_b_i_t___m_a_t_h_8h}\index{LIBS/LBIT\_MATH.h@{LIBS/LBIT\_MATH.h}}
+
+
+This header file contains required mathematical operations over bits, (Bit manipulation).  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_l_b_i_t___m_a_t_h_8h_a26474f43799fbade9cf300e21dd3a91a}{SET\+\_\+\+BIT}}(REG,  BIT)~REG $\vert$= (1$<$$<$BIT)
+\item 
+\#define \mbox{\hyperlink{_l_b_i_t___m_a_t_h_8h_a133aae6fc0d41bffab39ab223a7001de}{CLEAR\+\_\+\+BIT}}(REG,  BIT)~REG \&= $\sim$(1$<$$<$BIT)
+\item 
+\#define \mbox{\hyperlink{_l_b_i_t___m_a_t_h_8h_ac6ee02a427612497aa94621a3c7a6e27}{GET\+\_\+\+BIT}}(REG,  BIT)~((REG $>$$>$ BIT)\&1)
+\item 
+\#define \mbox{\hyperlink{_l_b_i_t___m_a_t_h_8h_ae335be8e8dc374dc7075fe9b6a410efd}{TOGGLE\+\_\+\+BIT}}(REG,  BIT)~REG $^\wedge$= (1$<$$<$BIT)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header file contains required mathematical operations over bits, (Bit manipulation). 
+
+\begin{DoxyAuthor}{Author}
+Ahmed Ashraf (\href{mailto:ahmedashrafelnaqeeb@gmail.com}{\texttt{ ahmedashrafelnaqeeb@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/09-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_l_b_i_t___m_a_t_h_8h_a133aae6fc0d41bffab39ab223a7001de}\label{_l_b_i_t___m_a_t_h_8h_a133aae6fc0d41bffab39ab223a7001de}} 
+\index{LBIT\_MATH.h@{LBIT\_MATH.h}!CLEAR\_BIT@{CLEAR\_BIT}}
+\index{CLEAR\_BIT@{CLEAR\_BIT}!LBIT\_MATH.h@{LBIT\_MATH.h}}
+\doxysubsubsection{\texorpdfstring{CLEAR\_BIT}{CLEAR\_BIT}}
+{\footnotesize\ttfamily \#define CLEAR\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~REG \&= $\sim$(1$<$$<$BIT)}
+
+Set a specific BIT in a certain register to 0 \mbox{\Hypertarget{_l_b_i_t___m_a_t_h_8h_ac6ee02a427612497aa94621a3c7a6e27}\label{_l_b_i_t___m_a_t_h_8h_ac6ee02a427612497aa94621a3c7a6e27}} 
+\index{LBIT\_MATH.h@{LBIT\_MATH.h}!GET\_BIT@{GET\_BIT}}
+\index{GET\_BIT@{GET\_BIT}!LBIT\_MATH.h@{LBIT\_MATH.h}}
+\doxysubsubsection{\texorpdfstring{GET\_BIT}{GET\_BIT}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~((REG $>$$>$ BIT)\&1)}
+
+Get the required bit value \mbox{\Hypertarget{_l_b_i_t___m_a_t_h_8h_a26474f43799fbade9cf300e21dd3a91a}\label{_l_b_i_t___m_a_t_h_8h_a26474f43799fbade9cf300e21dd3a91a}} 
+\index{LBIT\_MATH.h@{LBIT\_MATH.h}!SET\_BIT@{SET\_BIT}}
+\index{SET\_BIT@{SET\_BIT}!LBIT\_MATH.h@{LBIT\_MATH.h}}
+\doxysubsubsection{\texorpdfstring{SET\_BIT}{SET\_BIT}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~REG $\vert$= (1$<$$<$BIT)}
+
+Set a specific BIT in a certain register to 1 \mbox{\Hypertarget{_l_b_i_t___m_a_t_h_8h_ae335be8e8dc374dc7075fe9b6a410efd}\label{_l_b_i_t___m_a_t_h_8h_ae335be8e8dc374dc7075fe9b6a410efd}} 
+\index{LBIT\_MATH.h@{LBIT\_MATH.h}!TOGGLE\_BIT@{TOGGLE\_BIT}}
+\index{TOGGLE\_BIT@{TOGGLE\_BIT}!LBIT\_MATH.h@{LBIT\_MATH.h}}
+\doxysubsubsection{\texorpdfstring{TOGGLE\_BIT}{TOGGLE\_BIT}}
+{\footnotesize\ttfamily \#define TOGGLE\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{REG,  }\item[{}]{BIT }\end{DoxyParamCaption})~REG $^\wedge$= (1$<$$<$BIT)}
+
+Toggle the required bit value 

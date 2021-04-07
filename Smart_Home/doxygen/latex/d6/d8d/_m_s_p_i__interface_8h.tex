@@ -1,0 +1,223 @@
+\hypertarget{_m_s_p_i__interface_8h}{}\doxysection{MCAL/\+SPI/\+MSPI\+\_\+interface.h File Reference}
+\label{_m_s_p_i__interface_8h}\index{MCAL/SPI/MSPI\_interface.h@{MCAL/SPI/MSPI\_interface.h}}
+
+
+This file contains the interfacing information of SPI Module.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a4f88224ed99502006e24acb6aa96b049}{MSPI\+\_\+\+MODE\+\_\+\+SLAVE}}~(0x00)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_af2f444b82bd564974d33558196f181b6}{MSPI\+\_\+\+MODE\+\_\+\+MASTER}}~(0x10)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a8302712687a351ea5a2137cd142583fa}{MSPI\+\_\+\+DMODE\+\_\+\+LSB}}~(0x20)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a0f9890db99b66eb93e34ca751a109917}{MSPI\+\_\+\+DMODE\+\_\+\+MSB}}~(0x00)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_ae850a0ac4df70adaf77d386b41da4b30}{MSPI\+\_\+\+CMODE\+\_\+\+SAMPLE\+\_\+\+R\+\_\+\+SETUP\+\_\+F}}~(0x00)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a7cf437e9e9265978922c140bbf5b6bcf}{MSPI\+\_\+\+CMODE\+\_\+\+SAMPLE\+\_\+\+F\+\_\+\+SETUP\+\_\+F}}~(0x04)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_ad81852951e4ef2bac3011af2831eafbf}{MSPI\+\_\+\+CMODE\+\_\+\+SAMPLE\+\_\+\+F\+\_\+\+SETUP\+\_\+R}}~(0x80)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a7b001be260dd02212d016ea9ade027e3}{MSPI\+\_\+\+CMODE\+\_\+\+SAMPLE\+\_\+\+R\+\_\+\+SETUP\+\_\+R}}~(0x84)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a6d439636df145f78253d8c005c55ab7b}{MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+2}}~(0x40)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a99f8dcef3f3baa3fe912e5dc54686842}{MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+4}}~(0x00)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_ac1a09074be75d2209b9635de26c0cf57}{MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+8}}~(0x41)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a1d44013699b9b918ab790cfe5db7a9de}{MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+16}}~(0x01)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a580919df8300ed5e382c11739424a381}{MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+32}}~(0x42)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a2ca601aec06543a75d7365ee4c7a3382}{MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+64}}~(0x02)
+\item 
+\#define \mbox{\hyperlink{_m_s_p_i__interface_8h_a5a77970c6aa56f3e4681ee4c0c949ad8}{MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+128}}~(0x03)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_m_s_p_i__interface_8h_ac7c1608d3c6f9a5d924de0a0c9d5d77d}{mspi\+\_\+init}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+spi\+Mode, \mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+data\+Out\+Mode, \mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+clock\+Mode, \mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+spi\+Speed)
+\begin{DoxyCompactList}\small\item\em This function is responsible for initializing the SPI module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_s_p_i__interface_8h_a75440f0a8c72461611068f28adba3a57}{mspi\+\_\+master\+Send\+Recv\+Byte}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+send\+Data, \mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$pu8\+\_\+recv\+Data)
+\begin{DoxyCompactList}\small\item\em This function is responsible for sending and receiving 1 byte in master mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_s_p_i__interface_8h_a518cd8da6650f2cb2d5ebca07c664c0f}{mspi\+\_\+slave\+Send\+Recv\+Byte}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+send\+Data, \mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$pu8\+\_\+recv\+Data)
+\begin{DoxyCompactList}\small\item\em This function is responsible for sending and receiving 1 byte in slave mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the interfacing information of SPI Module. 
+
+\begin{DoxyAuthor}{Author}
+Mohamed Alaa 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021/04/06
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_m_s_p_i__interface_8h_a5a77970c6aa56f3e4681ee4c0c949ad8}\label{_m_s_p_i__interface_8h_a5a77970c6aa56f3e4681ee4c0c949ad8}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CLK\_BY\_128@{MSPI\_CLK\_BY\_128}}
+\index{MSPI\_CLK\_BY\_128@{MSPI\_CLK\_BY\_128}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CLK\_BY\_128}{MSPI\_CLK\_BY\_128}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+128~(0x03)}
+
+SPI Clock speed prescaler by 128 \mbox{\Hypertarget{_m_s_p_i__interface_8h_a1d44013699b9b918ab790cfe5db7a9de}\label{_m_s_p_i__interface_8h_a1d44013699b9b918ab790cfe5db7a9de}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CLK\_BY\_16@{MSPI\_CLK\_BY\_16}}
+\index{MSPI\_CLK\_BY\_16@{MSPI\_CLK\_BY\_16}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CLK\_BY\_16}{MSPI\_CLK\_BY\_16}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+16~(0x01)}
+
+SPI Clock speed prescaler by 16 \mbox{\Hypertarget{_m_s_p_i__interface_8h_a6d439636df145f78253d8c005c55ab7b}\label{_m_s_p_i__interface_8h_a6d439636df145f78253d8c005c55ab7b}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CLK\_BY\_2@{MSPI\_CLK\_BY\_2}}
+\index{MSPI\_CLK\_BY\_2@{MSPI\_CLK\_BY\_2}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CLK\_BY\_2}{MSPI\_CLK\_BY\_2}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+2~(0x40)}
+
+SPI Clock speed prescaler by 2 \mbox{\Hypertarget{_m_s_p_i__interface_8h_a580919df8300ed5e382c11739424a381}\label{_m_s_p_i__interface_8h_a580919df8300ed5e382c11739424a381}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CLK\_BY\_32@{MSPI\_CLK\_BY\_32}}
+\index{MSPI\_CLK\_BY\_32@{MSPI\_CLK\_BY\_32}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CLK\_BY\_32}{MSPI\_CLK\_BY\_32}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+32~(0x42)}
+
+SPI Clock speed prescaler by 32 \mbox{\Hypertarget{_m_s_p_i__interface_8h_a99f8dcef3f3baa3fe912e5dc54686842}\label{_m_s_p_i__interface_8h_a99f8dcef3f3baa3fe912e5dc54686842}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CLK\_BY\_4@{MSPI\_CLK\_BY\_4}}
+\index{MSPI\_CLK\_BY\_4@{MSPI\_CLK\_BY\_4}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CLK\_BY\_4}{MSPI\_CLK\_BY\_4}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+4~(0x00)}
+
+SPI Clock speed prescaler by 4 \mbox{\Hypertarget{_m_s_p_i__interface_8h_a2ca601aec06543a75d7365ee4c7a3382}\label{_m_s_p_i__interface_8h_a2ca601aec06543a75d7365ee4c7a3382}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CLK\_BY\_64@{MSPI\_CLK\_BY\_64}}
+\index{MSPI\_CLK\_BY\_64@{MSPI\_CLK\_BY\_64}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CLK\_BY\_64}{MSPI\_CLK\_BY\_64}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+64~(0x02)}
+
+SPI Clock speed prescaler by 64 \mbox{\Hypertarget{_m_s_p_i__interface_8h_ac1a09074be75d2209b9635de26c0cf57}\label{_m_s_p_i__interface_8h_ac1a09074be75d2209b9635de26c0cf57}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CLK\_BY\_8@{MSPI\_CLK\_BY\_8}}
+\index{MSPI\_CLK\_BY\_8@{MSPI\_CLK\_BY\_8}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CLK\_BY\_8}{MSPI\_CLK\_BY\_8}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CLK\+\_\+\+BY\+\_\+8~(0x41)}
+
+SPI Clock speed prescaler by 8 \mbox{\Hypertarget{_m_s_p_i__interface_8h_a7cf437e9e9265978922c140bbf5b6bcf}\label{_m_s_p_i__interface_8h_a7cf437e9e9265978922c140bbf5b6bcf}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CMODE\_SAMPLE\_F\_SETUP\_F@{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_F}}
+\index{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_F@{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_F}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_F}{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_F}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CMODE\+\_\+\+SAMPLE\+\_\+\+F\+\_\+\+SETUP\+\_\+F~(0x04)}
+
+SPI Control Mode\+: Sample (Falling) -\/ Setup (Falling) \mbox{\Hypertarget{_m_s_p_i__interface_8h_ad81852951e4ef2bac3011af2831eafbf}\label{_m_s_p_i__interface_8h_ad81852951e4ef2bac3011af2831eafbf}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CMODE\_SAMPLE\_F\_SETUP\_R@{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_R}}
+\index{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_R@{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_R}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_R}{MSPI\_CMODE\_SAMPLE\_F\_SETUP\_R}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CMODE\+\_\+\+SAMPLE\+\_\+\+F\+\_\+\+SETUP\+\_\+R~(0x80)}
+
+SPI Control Mode\+: Sample (Rising) -\/ Setup (Rising) \mbox{\Hypertarget{_m_s_p_i__interface_8h_ae850a0ac4df70adaf77d386b41da4b30}\label{_m_s_p_i__interface_8h_ae850a0ac4df70adaf77d386b41da4b30}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CMODE\_SAMPLE\_R\_SETUP\_F@{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_F}}
+\index{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_F@{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_F}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_F}{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_F}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CMODE\+\_\+\+SAMPLE\+\_\+\+R\+\_\+\+SETUP\+\_\+F~(0x00)}
+
+SPI Control Mode\+: Sample (Rising) -\/ Setup (Falling) \mbox{\Hypertarget{_m_s_p_i__interface_8h_a7b001be260dd02212d016ea9ade027e3}\label{_m_s_p_i__interface_8h_a7b001be260dd02212d016ea9ade027e3}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_CMODE\_SAMPLE\_R\_SETUP\_R@{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_R}}
+\index{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_R@{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_R}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_R}{MSPI\_CMODE\_SAMPLE\_R\_SETUP\_R}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+CMODE\+\_\+\+SAMPLE\+\_\+\+R\+\_\+\+SETUP\+\_\+R~(0x84)}
+
+SPI Control Mode\+: Sample (Rising) -\/ Setup (Rising) \mbox{\Hypertarget{_m_s_p_i__interface_8h_a8302712687a351ea5a2137cd142583fa}\label{_m_s_p_i__interface_8h_a8302712687a351ea5a2137cd142583fa}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_DMODE\_LSB@{MSPI\_DMODE\_LSB}}
+\index{MSPI\_DMODE\_LSB@{MSPI\_DMODE\_LSB}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_DMODE\_LSB}{MSPI\_DMODE\_LSB}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+DMODE\+\_\+\+LSB~(0x20)}
+
+SPI Least Significant Bit Mode \mbox{\Hypertarget{_m_s_p_i__interface_8h_a0f9890db99b66eb93e34ca751a109917}\label{_m_s_p_i__interface_8h_a0f9890db99b66eb93e34ca751a109917}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_DMODE\_MSB@{MSPI\_DMODE\_MSB}}
+\index{MSPI\_DMODE\_MSB@{MSPI\_DMODE\_MSB}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_DMODE\_MSB}{MSPI\_DMODE\_MSB}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+DMODE\+\_\+\+MSB~(0x00)}
+
+SPI Most Significant Bit Mode \mbox{\Hypertarget{_m_s_p_i__interface_8h_af2f444b82bd564974d33558196f181b6}\label{_m_s_p_i__interface_8h_af2f444b82bd564974d33558196f181b6}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_MODE\_MASTER@{MSPI\_MODE\_MASTER}}
+\index{MSPI\_MODE\_MASTER@{MSPI\_MODE\_MASTER}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_MODE\_MASTER}{MSPI\_MODE\_MASTER}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+MODE\+\_\+\+MASTER~(0x10)}
+
+SPI Master Mode \mbox{\Hypertarget{_m_s_p_i__interface_8h_a4f88224ed99502006e24acb6aa96b049}\label{_m_s_p_i__interface_8h_a4f88224ed99502006e24acb6aa96b049}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!MSPI\_MODE\_SLAVE@{MSPI\_MODE\_SLAVE}}
+\index{MSPI\_MODE\_SLAVE@{MSPI\_MODE\_SLAVE}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MSPI\_MODE\_SLAVE}{MSPI\_MODE\_SLAVE}}
+{\footnotesize\ttfamily \#define MSPI\+\_\+\+MODE\+\_\+\+SLAVE~(0x00)}
+
+SPI Slave Mode 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_m_s_p_i__interface_8h_ac7c1608d3c6f9a5d924de0a0c9d5d77d}\label{_m_s_p_i__interface_8h_ac7c1608d3c6f9a5d924de0a0c9d5d77d}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!mspi\_init@{mspi\_init}}
+\index{mspi\_init@{mspi\_init}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{mspi\_init()}{mspi\_init()}}
+{\footnotesize\ttfamily void mspi\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+spi\+Mode,  }\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+data\+Out\+Mode,  }\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+clock\+Mode,  }\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+spi\+Speed }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for initializing the SPI module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+spi\+Mode} & Variable to determine which mode the SPI module should be initialized in (MASTER or SLAVE) \\
+\hline
+{\em au8\+\_\+data\+Out\+Mode} & Variable to determine which data out mode the SPI module should be working with (MSB or LSB) \\
+\hline
+{\em au8\+\_\+clock\+Mode} & Variable to determine which clock mode the SPI module should be running on \\
+\hline
+{\em au8\+\_\+spi\+Speed} & Variable to determine what clock speed the SPI module should be running on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_s_p_i__interface_8h_a75440f0a8c72461611068f28adba3a57}\label{_m_s_p_i__interface_8h_a75440f0a8c72461611068f28adba3a57}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!mspi\_masterSendRecvByte@{mspi\_masterSendRecvByte}}
+\index{mspi\_masterSendRecvByte@{mspi\_masterSendRecvByte}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{mspi\_masterSendRecvByte()}{mspi\_masterSendRecvByte()}}
+{\footnotesize\ttfamily void mspi\+\_\+master\+Send\+Recv\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+send\+Data,  }\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$}]{pu8\+\_\+recv\+Data }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for sending and receiving 1 byte in master mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+send\+Data} & Specific data to be sent over the SPI module to the SLAVE \\
+\hline
+{\em pu8\+\_\+recv\+Data} & Variable to hold and store the received data from the SLAVE over the SPI module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_s_p_i__interface_8h_a518cd8da6650f2cb2d5ebca07c664c0f}\label{_m_s_p_i__interface_8h_a518cd8da6650f2cb2d5ebca07c664c0f}} 
+\index{MSPI\_interface.h@{MSPI\_interface.h}!mspi\_slaveSendRecvByte@{mspi\_slaveSendRecvByte}}
+\index{mspi\_slaveSendRecvByte@{mspi\_slaveSendRecvByte}!MSPI\_interface.h@{MSPI\_interface.h}}
+\doxysubsubsection{\texorpdfstring{mspi\_slaveSendRecvByte()}{mspi\_slaveSendRecvByte()}}
+{\footnotesize\ttfamily void mspi\+\_\+slave\+Send\+Recv\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+send\+Data,  }\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$}]{pu8\+\_\+recv\+Data }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for sending and receiving 1 byte in slave mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+send\+Data} & Specific data to be sent over the SPI module to the MASTER \\
+\hline
+{\em pu8\+\_\+recv\+Data} & Variable to hold and store the received data from the MASTER over the SPI module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

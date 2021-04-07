@@ -1,0 +1,151 @@
+\hypertarget{_m_u_a_r_t__program_8c}{}\doxysection{MCAL/\+UART/\+MUART\+\_\+program.c File Reference}
+\label{_m_u_a_r_t__program_8c}\index{MCAL/UART/MUART\_program.c@{MCAL/UART/MUART\_program.c}}
+
+
+This file contains the logical operations of UART Module.  
+
+
+{\ttfamily \#include \char`\"{}LSTD\+\_\+\+TYPES.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}LBIT\+\_\+\+MATH.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}MUART\+\_\+private.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}MUART\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util/delay.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_m_u_a_r_t__program_8c_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+CPU}}~16000000\+UL
+\item 
+\#define \mbox{\hyperlink{_m_u_a_r_t__program_8c_a8032a941e3dca02cdfade5cc3cfe1dc6}{TIMEOUT\+\_\+\+DELAY}}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_m_u_a_r_t__program_8c_a0895a694122a7a25af56db2376a96546}{muart\+\_\+init}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+baud\+Rate)
+\begin{DoxyCompactList}\small\item\em This function is responsible for initializing the UART module with specific baud rate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_u_a_r_t__program_8c_a82dd57524f5a2eb8bde94bc72c58d465}{muart\+\_\+send\+Byte}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+data\+Byte)
+\begin{DoxyCompactList}\small\item\em This function is responsible for sending one byte of data over the UART peripheral. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_u_a_r_t__program_8c_aca542ad8d2a745f1179ca8a097107c54}{muart\+\_\+send\+Stream}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$pu8\+\_\+data\+Stream, \mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+data\+Size)
+\begin{DoxyCompactList}\small\item\em This function is responsible for sending stream of data bytes over the UART peripheral. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{_m_u_a_r_t__program_8c_a644a370ac0cb260f8fa1c28c66c63fe6}{muart\+\_\+data\+Exists}} (void)
+\begin{DoxyCompactList}\small\item\em This function is responsible for checking whether there is a received data or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_u_a_r_t__program_8c_af857bb6b4ffa01f6fdc31cfd89de7dbc}{muart\+\_\+recv\+Byte}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$pu8\+\_\+data\+Byte)
+\begin{DoxyCompactList}\small\item\em This function is responsible for receiving one byte of data over the UART peripheral. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the logical operations of UART Module. 
+
+\begin{DoxyAuthor}{Author}
+Mohamed Alaa 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021/04/06
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_m_u_a_r_t__program_8c_a43bafb28b29491ec7f871319b5a3b2f8}\label{_m_u_a_r_t__program_8c_a43bafb28b29491ec7f871319b5a3b2f8}} 
+\index{MUART\_program.c@{MUART\_program.c}!F\_CPU@{F\_CPU}}
+\index{F\_CPU@{F\_CPU}!MUART\_program.c@{MUART\_program.c}}
+\doxysubsubsection{\texorpdfstring{F\_CPU}{F\_CPU}}
+{\footnotesize\ttfamily \#define F\+\_\+\+CPU~16000000\+UL}
+
+CPU\textquotesingle{}s Oscillator \mbox{\Hypertarget{_m_u_a_r_t__program_8c_a8032a941e3dca02cdfade5cc3cfe1dc6}\label{_m_u_a_r_t__program_8c_a8032a941e3dca02cdfade5cc3cfe1dc6}} 
+\index{MUART\_program.c@{MUART\_program.c}!TIMEOUT\_DELAY@{TIMEOUT\_DELAY}}
+\index{TIMEOUT\_DELAY@{TIMEOUT\_DELAY}!MUART\_program.c@{MUART\_program.c}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_DELAY}{TIMEOUT\_DELAY}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+DELAY~10}
+
+Timeout Delay macro 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_m_u_a_r_t__program_8c_a644a370ac0cb260f8fa1c28c66c63fe6}\label{_m_u_a_r_t__program_8c_a644a370ac0cb260f8fa1c28c66c63fe6}} 
+\index{MUART\_program.c@{MUART\_program.c}!muart\_dataExists@{muart\_dataExists}}
+\index{muart\_dataExists@{muart\_dataExists}!MUART\_program.c@{MUART\_program.c}}
+\doxysubsubsection{\texorpdfstring{muart\_dataExists()}{muart\_dataExists()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} muart\+\_\+data\+Exists (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for checking whether there is a received data or not. 
+
+\begin{DoxyReturn}{Returns}
+1 if there is a new unread data exists, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_u_a_r_t__program_8c_a0895a694122a7a25af56db2376a96546}\label{_m_u_a_r_t__program_8c_a0895a694122a7a25af56db2376a96546}} 
+\index{MUART\_program.c@{MUART\_program.c}!muart\_init@{muart\_init}}
+\index{muart\_init@{muart\_init}!MUART\_program.c@{MUART\_program.c}}
+\doxysubsubsection{\texorpdfstring{muart\_init()}{muart\_init()}}
+{\footnotesize\ttfamily void muart\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+baud\+Rate }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for initializing the UART module with specific baud rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+baud\+Rate} & Variable to determine which baud rate the UART should be running on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_u_a_r_t__program_8c_af857bb6b4ffa01f6fdc31cfd89de7dbc}\label{_m_u_a_r_t__program_8c_af857bb6b4ffa01f6fdc31cfd89de7dbc}} 
+\index{MUART\_program.c@{MUART\_program.c}!muart\_recvByte@{muart\_recvByte}}
+\index{muart\_recvByte@{muart\_recvByte}!MUART\_program.c@{MUART\_program.c}}
+\doxysubsubsection{\texorpdfstring{muart\_recvByte()}{muart\_recvByte()}}
+{\footnotesize\ttfamily void muart\+\_\+recv\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$}]{pu8\+\_\+data\+Byte }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for receiving one byte of data over the UART peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pu8\+\_\+data\+Byte} & Pointer to store the received 1-\/byte data over the UART module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_u_a_r_t__program_8c_a82dd57524f5a2eb8bde94bc72c58d465}\label{_m_u_a_r_t__program_8c_a82dd57524f5a2eb8bde94bc72c58d465}} 
+\index{MUART\_program.c@{MUART\_program.c}!muart\_sendByte@{muart\_sendByte}}
+\index{muart\_sendByte@{muart\_sendByte}!MUART\_program.c@{MUART\_program.c}}
+\doxysubsubsection{\texorpdfstring{muart\_sendByte()}{muart\_sendByte()}}
+{\footnotesize\ttfamily void muart\+\_\+send\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+data\+Byte }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for sending one byte of data over the UART peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+data\+Byte} & Specific 1-\/byte value to be sent over the UART module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_u_a_r_t__program_8c_aca542ad8d2a745f1179ca8a097107c54}\label{_m_u_a_r_t__program_8c_aca542ad8d2a745f1179ca8a097107c54}} 
+\index{MUART\_program.c@{MUART\_program.c}!muart\_sendStream@{muart\_sendStream}}
+\index{muart\_sendStream@{muart\_sendStream}!MUART\_program.c@{MUART\_program.c}}
+\doxysubsubsection{\texorpdfstring{muart\_sendStream()}{muart\_sendStream()}}
+{\footnotesize\ttfamily void muart\+\_\+send\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$}]{pu8\+\_\+data\+Stream,  }\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+data\+Size }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for sending stream of data bytes over the UART peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pu8\+\_\+data\+Stream} & Stream of 1-\/bytes items each to be sent over the UART module \\
+\hline
+{\em au8\+\_\+data\+Size} & Size of the stream to be sent over the UART module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

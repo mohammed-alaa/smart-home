@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-APP\ASMH_progran.c
+APP\ASMH_program.c
 
 HAL\BTH\HBTH_program.c
 

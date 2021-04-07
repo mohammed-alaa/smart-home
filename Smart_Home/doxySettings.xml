@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DoxySettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SettingsFile>D:\Working Directory\Smart_Home\Smart_Home\doxySettings.xml</SettingsFile>
+  <ProjectName>Smart_Home</ProjectName>
+  <DoxyExePath>D:\Doxygen\bin\doxygen.exe</DoxyExePath>
+  <UseDefaultSettings>true</UseDefaultSettings>
+  <GenerateAsPartOfBuild>false</GenerateAsPartOfBuild>
+  <ConfigFilePath>D:\Working Directory\Smart_Home\Smart_Home\doxyfile</ConfigFilePath>
+  <OutputDirPath>D:\Working Directory\Smart_Home\Smart_Home\doxygen</OutputDirPath>
+  <ShowErrorsAndWarnings>false</ShowErrorsAndWarnings>
+</DoxySettings>

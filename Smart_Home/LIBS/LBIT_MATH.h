@@ -13,16 +13,28 @@
 #ifndef _LBIT_MATH_H_
 #define _LBIT_MATH_H_
 
-/*Setting the required bit to 1*/
-#define SET_BIT(REG,BIT)      REG |= (1<<BIT)
+/*!
+  \def	SET_BIT(REG, BIT)
+  Set a specific BIT in a certain register to 1
+*/
+#define SET_BIT(REG, BIT)      REG |= (1<<BIT)
 
-/*Setting the required bit to 0*/
-#define CLEAR_BIT(REG,BIT)    REG &= ~(1<<BIT)
+/*!
+  \def	CLEAR_BIT(REG, BIT)
+  Set a specific BIT in a certain register to 0
+*/
+#define CLEAR_BIT(REG, BIT)    REG &= ~(1<<BIT)
 
-/*Get the required bit value*/
-#define GET_BIT(REG,BIT)      ((REG >> BIT)&1)
+/*!
+  \def	GET_BIT(REG, BIT)
+  Get the required bit value
+*/
+#define GET_BIT(REG, BIT)      ((REG >> BIT)&1)
 
-/*Toggle the required bit value*/
-#define TOGGLE_BIT(REG,BIT)   REG ^= (1<<BIT)
+/*!
+  \def	TOGGLE_BIT(REG, BIT)
+  Toggle the required bit value
+*/
+#define TOGGLE_BIT(REG, BIT)   REG ^= (1<<BIT)
 
 #endif /*_LBIT_MATH_H_*/

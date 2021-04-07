@@ -1,9 +1,12 @@
-/******************************************************************************/
-/* File name: MUART_program.c                                                 */
-/* Author: Mohamed Alaa                                                       */
-/* Description: This file contains the logical operations of UART Module      */
-/* Date: 3/10/2021                                                            */
-/******************************************************************************/
+/**
+ * @file    MUART_program.c
+ * @author  Mohamed Alaa
+ * @brief   This file contains the logical operations of UART Module
+ * @date    2021/04/06
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
 
 /************************************************************************/
 /*                             Includes                                 */
@@ -12,6 +15,10 @@
 #include "LBIT_MATH.h"
 #include "MUART_private.h"
 #include "MUART_interface.h"
+/*!
+  \def	F_CPU
+  CPU's Oscillator
+*/
 #define F_CPU 16000000UL
 #include "util/delay.h"
 
@@ -19,6 +26,10 @@
 /*                         Important macros                             */
 /************************************************************************/
 
+/*!
+  \def	TIMEOUT_DELAY
+  Timeout Delay macro
+*/
 #define TIMEOUT_DELAY	10
 
 /************************************************************************/

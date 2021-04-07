@@ -1,0 +1,3263 @@
+AutoGen Definitions dummy;
+file = {
+  file-id   = '_r_e_a_d_m_e_8md';
+  file-name = 'README.md';
+  file-full-name  = 'D:/Working Directory/Smart_Home/README.md';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_a_s_m_h__interface_8h';
+  file-name = 'ASMH_interface.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_a_s_m_h__interface_8h_1a8526e6fa1315017dfd7aa6da48f5b497';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'ASMH_SPIM_MASTER';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_interface.h';
+      define-mem-desc-line = '25';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Indicates that the MASTER mode equals 0 in the SPI module
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_a_s_m_h__interface_8h_1a9106c9d88fd25f49924178bf265d1f34';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'ASMH_SPIM_SLAVE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(1)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_interface.h';
+      define-mem-desc-line = '31';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Indicates that the SLAVE mode equals 1 in the SPI module
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__interface_8h_1a82dfc190a0e5802ad58dd5554703c53d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_initApp';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_mode';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_interface.h';
+      func-mem-desc-line = '43';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing the application module with a specific mode whether MASTER mode or SLAVE mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_mode    Variable to determine which mode the application should be initialized in
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__interface_8h_1abd055088d7eb2ba0a63ab44c0839db92';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_masterBTHRecvCmd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_data';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_interface.h';
+      func-mem-desc-line = '51';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for receiving command in the MASTER mode over the Bluetooth module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_data    Pointer to store the received command in the MASTER mode over the Bluetooth module
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__interface_8h_1a7b1de0656855d025debe4193ac3d8a1d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_masterSPISendCmd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_cmd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_interface.h';
+      func-mem-desc-line = '59';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending command over the SPI module in the MASTER mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_cmd Variable to hold the received command over the Bluetooth module and send it to the SLAVE over the SPI module
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__interface_8h_1a8249a148e86764898a7a33f7600d30f2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_slaveSPIrecvCmd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_cmd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_interface.h';
+      func-mem-desc-line = '67';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for receiving command over the SPI module in the SLAVE mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_cmd    Pointer to store the received command in the SLAVE mode from the MASTER over the SPI module
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__interface_8h_1a5c6b664bb610d4e5bc02608e353f2b79';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_slaveProcessRecvData';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_data';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_interface.h';
+      func-mem-desc-line = '75';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This functions is responsible for processing the received data from the MASTER over the SPI module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_data   Variable to hold the received command over the SPI module from the MASTER and apply specific action(s) based on the received command
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_interface.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the interfacing information of Smart Home Application.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_a_s_m_h__private_8h';
+  file-name = 'ASMH_private.h';
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_private.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the private information of Smart Home application.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_a_s_m_h__program_8c';
+  file-name = 'ASMH_program.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__program_8c_1a08bc23b9c2c7341f447ce89c0bd03d21';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_initSpi';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_spiMode';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_program.c';
+      func-mem-desc-line = '28';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__program_8c_1a82dfc190a0e5802ad58dd5554703c53d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_initApp';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_mode';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_program.c';
+      func-mem-desc-line = '64';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing the application module with a specific mode whether MASTER mode or SLAVE mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_mode    Variable to determine which mode the application should be initialized in
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__program_8c_1a875f2c02430e3963993e89f8ad3a76eb';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_masterBTHRecvCmd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_cmd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_program.c';
+      func-mem-desc-line = '87';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for receiving command in the MASTER mode over the Bluetooth module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_data    Pointer to store the received command in the MASTER mode over the Bluetooth module
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__program_8c_1a7b1de0656855d025debe4193ac3d8a1d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_masterSPISendCmd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_cmd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_program.c';
+      func-mem-desc-line = '96';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending command over the SPI module in the MASTER mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_cmd Variable to hold the received command over the Bluetooth module and send it to the SLAVE over the SPI module
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__program_8c_1a8249a148e86764898a7a33f7600d30f2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_slaveSPIrecvCmd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_cmd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_program.c';
+      func-mem-desc-line = '105';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for receiving command over the SPI module in the SLAVE mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_cmd    Pointer to store the received command in the SLAVE mode from the MASTER over the SPI module
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_a_s_m_h__program_8c_1a5c6b664bb610d4e5bc02608e353f2b79';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'asmh_slaveProcessRecvData';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_data';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_program.c';
+      func-mem-desc-line = '114';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This functions is responsible for processing the received data from the MASTER over the SPI module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_data   Variable to hold the received command over the SPI module from the MASTER and apply specific action(s) based on the received command
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/APP/ASMH_program.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the logical operations of Smart Home Application.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_h_b_t_h__interface_8h';
+  file-name = 'HBTH_interface.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_b_t_h__interface_8h_1a81064e6a8e5b55f5962897cb162ac63e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hbth_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_interface.h';
+      func-mem-desc-line = '28';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing the bluetooth module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_b_t_h__interface_8h_1a479fce72d00dc6e816fe253d955abbe5';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hbth_dataExists';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_interface.h';
+      func-mem-desc-line = '35';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for checking whether there is a received data over the bluetooth module or not.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return 1 if there is a new unread data, 0 otherwise
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_b_t_h__interface_8h_1a4e97a0bb3a8cf4373f3dbd5a038e2588';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hbth_recvCmd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_dataByte';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_interface.h';
+      func-mem-desc-line = '43';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for receiving a command over the bluetooth module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_dataByte Pointer to store the received command over the Bluetooth module
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_interface.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the interfacing information of Bluetooth Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_h_b_t_h__private_8h';
+  file-name = 'HBTH_private.h';
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_private.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the private information of Bluetooth Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_h_b_t_h__program_8c';
+  file-name = 'HBTH_program.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_b_t_h__program_8c_1a81064e6a8e5b55f5962897cb162ac63e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hbth_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_program.c';
+      func-mem-desc-line = '23';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing the bluetooth module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_b_t_h__program_8c_1a479fce72d00dc6e816fe253d955abbe5';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hbth_dataExists';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_program.c';
+      func-mem-desc-line = '38';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for checking whether there is a received data over the bluetooth module or not.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return 1 if there is a new unread data, 0 otherwise
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_b_t_h__program_8c_1a4e97a0bb3a8cf4373f3dbd5a038e2588';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hbth_recvCmd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_dataByte';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_program.c';
+      func-mem-desc-line = '44';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for receiving a command over the bluetooth module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_dataByte Pointer to store the received command over the Bluetooth module
+
+@return void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/BTH/HBTH_program.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the logical operations of Bluetooth Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_h_l_e_d__interface_8h';
+  file-name = 'HLED_interface.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_h_l_e_d__interface_8h_1a4ef18cc1c10a0fbd730317bc45e87064';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'HLED_LED1';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(1)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_interface.h';
+      define-mem-desc-line = '27';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Indicates the values of the LED 1
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_h_l_e_d__interface_8h_1a53ac8f661b0d07af1c599fb8116da335';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'HLED_LED2';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(2)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_interface.h';
+      define-mem-desc-line = '32';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Indicates the values of the LED 2
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_l_e_d__interface_8h_1ab11012d4a4b8bdc1a1df7a44fcdbf72e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hled_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_led';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_interface.h';
+      func-mem-desc-line = '44';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing a specific LED.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_led Variable to determine which LED to initialize
+
+@return  void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_l_e_d__interface_8h_1a4160d747feec293cbb8d75635c0b718c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hled_turnOnLED';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_led';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_interface.h';
+      func-mem-desc-line = '52';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for turning ON a specific LED.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_led Variable to determine which LED to turn on
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_l_e_d__interface_8h_1a19a79785791ac623d2dc2768716dcbef';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hled_turnOffLED';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_led';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_interface.h';
+      func-mem-desc-line = '60';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for turning OFF a specific LED.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_led Variable to determine which LED to turn off
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_l_e_d__interface_8h_1a76409b5917f8010cc44a7afda4d32cff';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hled_toggleLED';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_led';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_interface.h';
+      func-mem-desc-line = '68';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for toggling a specific LED.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_led Variable to determine which LED to toggle
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_interface.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the interface information of LED Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_h_l_e_d__private_8h';
+  file-name = 'HLED_private.h';
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_private.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the private information of LED Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_h_l_e_d__program_8c';
+  file-name = 'HLED_program.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_l_e_d__program_8c_1ab11012d4a4b8bdc1a1df7a44fcdbf72e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hled_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_led';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_program.c';
+      func-mem-desc-line = '25';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing a specific LED.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_led Variable to determine which LED to initialize
+
+@return  void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_l_e_d__program_8c_1a4160d747feec293cbb8d75635c0b718c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hled_turnOnLED';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_led';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_program.c';
+      func-mem-desc-line = '53';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for turning ON a specific LED.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_led Variable to determine which LED to turn on
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_l_e_d__program_8c_1a19a79785791ac623d2dc2768716dcbef';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hled_turnOffLED';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_led';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_program.c';
+      func-mem-desc-line = '81';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for turning OFF a specific LED.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_led Variable to determine which LED to turn off
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_h_l_e_d__program_8c_1a76409b5917f8010cc44a7afda4d32cff';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'hled_toggleLED';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_led';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_program.c';
+      func-mem-desc-line = '109';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for toggling a specific LED.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_led Variable to determine which LED to toggle
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/HAL/LED/HLED_program.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the logical operations of LED Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_l_b_i_t___m_a_t_h_8h';
+  file-name = 'LBIT_MATH.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_l_b_i_t___m_a_t_h_8h_1a26474f43799fbade9cf300e21dd3a91a';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SET_BIT';
+      define-mem-param  = {
+        define-mem-def-name = 'REG';
+      }; /*        define-mem-def--param */
+      define-mem-param  = {
+        define-mem-def-name = 'BIT';
+      }; /*        define-mem-def--param */
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+REG |= (1<<BIT)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LBIT_MATH.h';
+      define-mem-desc-line = '20';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Set a specific BIT in a certain register to 1
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_l_b_i_t___m_a_t_h_8h_1a133aae6fc0d41bffab39ab223a7001de';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'CLEAR_BIT';
+      define-mem-param  = {
+        define-mem-def-name = 'REG';
+      }; /*        define-mem-def--param */
+      define-mem-param  = {
+        define-mem-def-name = 'BIT';
+      }; /*        define-mem-def--param */
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+REG &= ~(1<<BIT)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LBIT_MATH.h';
+      define-mem-desc-line = '26';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Set a specific BIT in a certain register to 0
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_l_b_i_t___m_a_t_h_8h_1ac6ee02a427612497aa94621a3c7a6e27';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'GET_BIT';
+      define-mem-param  = {
+        define-mem-def-name = 'REG';
+      }; /*        define-mem-def--param */
+      define-mem-param  = {
+        define-mem-def-name = 'BIT';
+      }; /*        define-mem-def--param */
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+((REG >> BIT)&1)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LBIT_MATH.h';
+      define-mem-desc-line = '32';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Get the required bit value
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_l_b_i_t___m_a_t_h_8h_1ae335be8e8dc374dc7075fe9b6a410efd';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'TOGGLE_BIT';
+      define-mem-param  = {
+        define-mem-def-name = 'REG';
+      }; /*        define-mem-def--param */
+      define-mem-param  = {
+        define-mem-def-name = 'BIT';
+      }; /*        define-mem-def--param */
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+REG ^= (1<<BIT)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LBIT_MATH.h';
+      define-mem-desc-line = '38';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Toggle the required bit value
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LBIT_MATH.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This header file contains required mathematical operations over bits, (Bit manipulation).
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Ahmed Ashraf (ahmedashrafelnaqeeb@gmail.com)
+@version 1.0
+@date    2020-09-18
+
+@copyright Copyright (c) 2020
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_l_s_t_d___t_y_p_e_s_8h';
+  file-name = 'LSTD_TYPES.h';
+    typedef = {
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_l_s_t_d___t_y_p_e_s_8h_1ae081489b4906f65a3cb18e9fbe9f8d23';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+unsigned char
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'u8_t';
+      typedef-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+      typedef-mem-desc-line = '16';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Integer 8 bits unsigned data type 
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_l_s_t_d___t_y_p_e_s_8h_1ac94561f8204ddeac10e706b2be080619';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+signed char
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 's8_t';
+      typedef-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+      typedef-mem-desc-line = '19';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Integer 8 bits signed data type 
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_l_s_t_d___t_y_p_e_s_8h_1af0f2044e80549923fce3e32ea0bf2eba';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+unsigned short int
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'u16_t';
+      typedef-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+      typedef-mem-desc-line = '22';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Integer 16 bits unsigned data type 
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_l_s_t_d___t_y_p_e_s_8h_1a8f384db74f5c37e8815a728036b87b24';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+signed short int
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 's16_t';
+      typedef-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+      typedef-mem-desc-line = '25';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Integer 16 bits signed data type 
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_l_s_t_d___t_y_p_e_s_8h_1a8f89886f260d4feee6b3a01d5b4d2e4a';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+unsigned long int
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'u32_t';
+      typedef-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+      typedef-mem-desc-line = '28';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Integer 32 bits unsigned data type 
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_l_s_t_d___t_y_p_e_s_8h_1ac8662b16b8214b6a04e7e8781d23847f';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+signed long int
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 's32_t';
+      typedef-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+      typedef-mem-desc-line = '31';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Integer 32 bits signed data type 
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_l_s_t_d___t_y_p_e_s_8h_1ab83d008143db0ecac494611d0a71ad63';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'f32_t';
+      typedef-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+      typedef-mem-desc-line = '34';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Float 32 bits data type 
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_l_s_t_d___t_y_p_e_s_8h_1aeb643516fcbc92c4cbd87c737c8f0f0c';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+double
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'f64_t';
+      typedef-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+      typedef-mem-desc-line = '37';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Float 64 bits data type 
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/LIBS/LSTD_TYPES.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This header file contains C created data types.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Ahmed Ashraf (ahmedashrafelnaqeeb@gmail.com)
+@date    2020/09/18
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'main_8c';
+  file-name = 'main.c';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'main_8c_1a6bfbb4f8db036625c4cf4df395f59d5a';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MASTER_VERSION';
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/main.c';
+      define-mem-desc-line = '17';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'main_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'main';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/main.c';
+      func-mem-desc-line = '24';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Main function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return int 0 on successful execution of the program, anything else on errors
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/main.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This is the main source file which is responsible for running the whole project.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_d_i_o__interface_8h';
+  file-name = 'MDIO_interface.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a7c8a7f98a98d8cb125dd57a66720ab30';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PORTA';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '24';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO Port A definition
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a09a0c85cd3da09d9cdf63a5ac4c39f77';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PORTB';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(1)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '30';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO Port B definition
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a68fea88642279a70246e026e7221b0a5';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PORTC';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(2)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '33';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO Port C definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a3e6a2517db4f9cb7c9037adf0aefe79b';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PORTD';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(3)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '36';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO Port D definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a8909e4cc8d1f05aeb73943042144abdf';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PIN0';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0b00000001)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '40';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO PIN0 definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a522e24eb599eab6d1ec4b1ae5a3a12b2';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PIN1';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0b00000010)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '43';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO PIN1 definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a903210ad84aed4458cbc75b489f9bb7e';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PIN2';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0b00000100)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '46';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO PIN2 definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1ac4b639acb4bf160a49ff3c0d8fa80fc4';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PIN3';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0b00001000)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '49';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO PIN3 definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1aa3a35a41c5285c9c632aa626ac6761cb';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PIN4';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0b00010000)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '52';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO PIN4 definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1ace14987760ea9b01a7ce6d947768e313';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PIN5';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0b00100000)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '55';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO PIN5 definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1ab34b29d3af96065538a6ffb40dbc0ae5';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PIN6';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0b01000000)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '58';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO PIN6 definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1af4d3f80395907ab4999773479f1aecf1';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PIN7';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0b10000000)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '61';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO PIN7 definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a0312fd593cef9505985de33933b505a3';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'INPUT_FLOAT';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '65';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO pins' status input float definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a6295096662a20dd56186396e535fbe92';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'INPUT_PULLUP';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(1)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '68';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO pins' status input pull-up definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a61a3c9a18380aafb6e430e79bf596557';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'OUTPUT';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(2)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '71';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO pins' status output definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1ab811d8c6ff3a505312d3276590444289';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'LOW';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '75';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO pins' value high definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__interface_8h_1a5bb885982ff66a2e0a0a45a8ee9c35e2';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'HIGH';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(1)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      define-mem-desc-line = '78';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+GPIO pins' value low definition 
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_d_i_o__interface_8h_1a38c29b21574d553b847cad16879c316c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mdio_setPinStatus';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_port';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pin';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pinStatus';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      func-mem-desc-line = '92';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for setting a certain status to a certain PORT PIN.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_port   Variable to determine which PORT we are changing its status
+@param au8_pin        Variable to determine which PIN we are changing its status
+@param au8_pinStatus  Variable to determine what status we want to change the specified PORT & PIN status
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_d_i_o__interface_8h_1aed64315133ce0dc88462b7e8d5ff1ac8';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mdio_setPinValue';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_port';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pin';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pinValue';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      func-mem-desc-line = '102';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for setting a certain value to a certain PORT PIN.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_port   Variable to determine which PORT we are changing its status
+@param au8_pin        Variable to determine which PIN we are changing its status
+@param au8_pinValue    Variable to determine what value we are going to apply on the specified PORT & PIN
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_d_i_o__interface_8h_1a8e822e23f53626354d8d30e605f7bf56';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mdio_togglePinValue';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_port';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pin';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      func-mem-desc-line = '111';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for toggling the current value of a certain PORT PIN.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_port   Variable to determine which PORT we are toggling its status
+@param au8_pin        Variable to determine which PIN we are toggling its status
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_d_i_o__interface_8h_1ab7d5784bfc0a15a47443c06fd526634c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mdio_getPinValue';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_port';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pin';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+      func-mem-desc-line = '120';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for getting the current value of a certain PORT PIN.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_port   Variable to determine which PORT we are getting its current value
+@param au8_pin        Variable to determine which PIN we are changing its current value
+
+@return The current value of a certain PORT & PIN
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_interface.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the interfacing information of DIO Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_d_i_o__private_8h';
+  file-name = 'MDIO_private.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a244fd204b2a4b1bb50cfda603f1e1ec3';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_PORTA';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x3B))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '24';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to PORTA's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a284e03207be3698c6cce7023705ba5dd';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_DDRA';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x3A))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '30';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to DDRA's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a1366103984697d205997397514d138d3';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_PINA';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x39))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '36';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to PINA's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1acd116e10ac9ccff983e9198d3070a2d6';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_PORTB';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x38))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '43';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to PORTB's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a774429ed6259bbf701cfe0bd4c1f0a4e';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_DDRB';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x37))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '49';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to DDRB's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1ab899d61e2ee8975a66a7e22863b598a0';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_PINB';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x36))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '55';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to PINB's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a55cd8a991b915af8fa0ad7dc97074df9';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_PORTC';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x35))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '62';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to PORTC's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a2f7316547a0edae998379956cb8b5624';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_DDRC';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x34))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '68';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to DDRC's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a236a2ffff523a3dadd894cdec9ee33e9';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_PINC';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x33))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '74';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to PINC's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a1b5eba4c08c74c89ecb0569221adda0e';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_PORTD';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x32))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '81';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to PORTD's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a1814e619bf17db1a76c085bf6c50037a';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_DDRD';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x31))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '87';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to DDRD's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_d_i_o__private_8h_1a84bbc52a6a2c8957f75eba46e48b1063';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MDIO_PIND';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t *) (0x30))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+      define-mem-desc-line = '93';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to PIND's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_private.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the private information of DIO Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_d_i_o__program_8c';
+  file-name = 'MDIO_program.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_d_i_o__program_8c_1a38c29b21574d553b847cad16879c316c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mdio_setPinStatus';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_port';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pin';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pinStatus';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_program.c';
+      func-mem-desc-line = '22';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for setting a certain status to a certain PORT PIN.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_port   Variable to determine which PORT we are changing its status
+@param au8_pin        Variable to determine which PIN we are changing its status
+@param au8_pinStatus  Variable to determine what status we want to change the specified PORT & PIN status
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_d_i_o__program_8c_1aed64315133ce0dc88462b7e8d5ff1ac8';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mdio_setPinValue';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_port';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pin';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pinValue';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_program.c';
+      func-mem-desc-line = '144';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for setting a certain value to a certain PORT PIN.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_port   Variable to determine which PORT we are changing its status
+@param au8_pin        Variable to determine which PIN we are changing its status
+@param au8_pinValue    Variable to determine what value we are going to apply on the specified PORT & PIN
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_d_i_o__program_8c_1a8e822e23f53626354d8d30e605f7bf56';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mdio_togglePinValue';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_port';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pin';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_program.c';
+      func-mem-desc-line = '238';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for toggling the current value of a certain PORT PIN.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_port   Variable to determine which PORT we are toggling its status
+@param au8_pin        Variable to determine which PIN we are toggling its status
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_d_i_o__program_8c_1ab7d5784bfc0a15a47443c06fd526634c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mdio_getPinValue';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_port';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_pin';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_program.c';
+      func-mem-desc-line = '268';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for getting the current value of a certain PORT PIN.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_port   Variable to determine which PORT we are getting its current value
+@param au8_pin        Variable to determine which PIN we are changing its current value
+
+@return The current value of a certain PORT & PIN
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/GPIO/MDIO_program.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the logical operations of DIO Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_s_p_i__interface_8h';
+  file-name = 'MSPI_interface.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a4f88224ed99502006e24acb6aa96b049';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_MODE_SLAVE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x00)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '24';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Slave Mode
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1af2f444b82bd564974d33558196f181b6';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_MODE_MASTER';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x10)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '30';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Master Mode
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a8302712687a351ea5a2137cd142583fa';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_DMODE_LSB';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x20)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '37';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Least Significant Bit Mode
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a0f9890db99b66eb93e34ca751a109917';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_DMODE_MSB';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x00)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '43';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Most Significant Bit Mode
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1ae850a0ac4df70adaf77d386b41da4b30';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CMODE_SAMPLE_R_SETUP_F';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x00)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '50';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Control Mode: Sample (Rising) - Setup (Falling)
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a7cf437e9e9265978922c140bbf5b6bcf';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CMODE_SAMPLE_F_SETUP_F';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x04)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '56';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Control Mode: Sample (Falling) - Setup (Falling)
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1ad81852951e4ef2bac3011af2831eafbf';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CMODE_SAMPLE_F_SETUP_R';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x80)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '62';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Control Mode: Sample (Rising) - Setup (Rising)
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a7b001be260dd02212d016ea9ade027e3';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CMODE_SAMPLE_R_SETUP_R';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x84)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '68';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Control Mode: Sample (Rising) - Setup (Rising)
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a6d439636df145f78253d8c005c55ab7b';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CLK_BY_2';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x40)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '75';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Clock speed prescaler by 2
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a99f8dcef3f3baa3fe912e5dc54686842';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CLK_BY_4';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x00)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '81';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Clock speed prescaler by 4
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1ac1a09074be75d2209b9635de26c0cf57';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CLK_BY_8';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x41)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '87';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Clock speed prescaler by 8
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a1d44013699b9b918ab790cfe5db7a9de';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CLK_BY_16';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x01)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '93';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Clock speed prescaler by 16
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a580919df8300ed5e382c11739424a381';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CLK_BY_32';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x42)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '99';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Clock speed prescaler by 32
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a2ca601aec06543a75d7365ee4c7a3382';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CLK_BY_64';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x02)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '105';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Clock speed prescaler by 64
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__interface_8h_1a5a77970c6aa56f3e4681ee4c0c949ad8';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_CLK_BY_128';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(0x03)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      define-mem-desc-line = '111';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+SPI Clock speed prescaler by 128
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_s_p_i__interface_8h_1ac7c1608d3c6f9a5d924de0a0c9d5d77d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mspi_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_spiMode';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_dataOutMode';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_clockMode';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_spiSpeed';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      func-mem-desc-line = '126';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing the SPI module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_spiMode     Variable to determine which mode the SPI module should be initialized in (MASTER or SLAVE)
+@param au8_dataOutMode Variable to determine which data out mode the SPI module should be working with (MSB or LSB)
+@param au8_clockMode   Variable to determine which clock mode the SPI module should be running on
+@param au8_spiSpeed    Variable to determine what clock speed the SPI module should be running on
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_s_p_i__interface_8h_1a75440f0a8c72461611068f28adba3a57';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mspi_masterSendRecvByte';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_sendData';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_recvData';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      func-mem-desc-line = '135';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending and receiving 1 byte in master mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_sendData   Specific data to be sent over the SPI module to the SLAVE
+@param pu8_recvData   Variable to hold and store the received data from the SLAVE over the SPI module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_s_p_i__interface_8h_1a518cd8da6650f2cb2d5ebca07c664c0f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mspi_slaveSendRecvByte';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_sendData';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_recvData';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+      func-mem-desc-line = '144';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending and receiving 1 byte in slave mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_sendData   Specific data to be sent over the SPI module to the MASTER
+@param pu8_recvData   Variable to hold and store the received data from the MASTER over the SPI module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_interface.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the interfacing information of SPI Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_s_p_i__private_8h';
+  file-name = 'MSPI_private.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__private_8h_1a67c6782a7265022fe51d28540f9b97ec';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_SPCR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x2D))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_private.h';
+      define-mem-desc-line = '23';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Point of MSPI_SPCR's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__private_8h_1a7b0014e30048ce46059355cc28b85fcc';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_SPSR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x2E))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_private.h';
+      define-mem-desc-line = '29';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Point of MSPI_SPCR's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__private_8h_1a57340d8095ea172ff4b0d6653540e3eb';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MSPI_SPDR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x2F))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_private.h';
+      define-mem-desc-line = '35';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Point of MSPI_SPCR's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_private.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the private information of SPI Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_s_p_i__program_8c';
+  file-name = 'MSPI_program.c';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__program_8c_1a43bafb28b29491ec7f871319b5a3b2f8';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'F_CPU';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+16000000UL
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_program.c';
+      define-mem-desc-line = '23';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+CPU's Oscillator
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_s_p_i__program_8c_1a8032a941e3dca02cdfade5cc3cfe1dc6';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'TIMEOUT_DELAY';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(100)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_program.c';
+      define-mem-desc-line = '34';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Timeout Delay macro
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_s_p_i__program_8c_1ac7c1608d3c6f9a5d924de0a0c9d5d77d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mspi_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_spiMode';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_dataOutMode';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_clockMode';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_spiSpeed';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_program.c';
+      func-mem-desc-line = '39';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing the SPI module.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_spiMode     Variable to determine which mode the SPI module should be initialized in (MASTER or SLAVE)
+@param au8_dataOutMode Variable to determine which data out mode the SPI module should be working with (MSB or LSB)
+@param au8_clockMode   Variable to determine which clock mode the SPI module should be running on
+@param au8_spiSpeed    Variable to determine what clock speed the SPI module should be running on
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_s_p_i__program_8c_1a75440f0a8c72461611068f28adba3a57';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mspi_masterSendRecvByte';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_sendData';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_recvData';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_program.c';
+      func-mem-desc-line = '51';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending and receiving 1 byte in master mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_sendData   Specific data to be sent over the SPI module to the SLAVE
+@param pu8_recvData   Variable to hold and store the received data from the SLAVE over the SPI module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_s_p_i__program_8c_1a518cd8da6650f2cb2d5ebca07c664c0f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'mspi_slaveSendRecvByte';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_sendData';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_recvData';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_program.c';
+      func-mem-desc-line = '76';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending and receiving 1 byte in slave mode.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_sendData   Specific data to be sent over the SPI module to the MASTER
+@param pu8_recvData   Variable to hold and store the received data from the MASTER over the SPI module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/SPI/MSPI_program.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the logical operations of SPI Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_u_a_r_t__interface_8h';
+  file-name = 'MUART_interface.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__interface_8h_1a6ac0ec09e196c5ab6329b6b930216a0a';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_BAUDRATE_2400';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(416)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      define-mem-desc-line = '24';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+UART Baud Rate of 2400
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__interface_8h_1a14399a9c277b4d09f8fdfb30c371b161';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_BAUDRATE_4800';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(207)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      define-mem-desc-line = '30';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+UART Baud Rate of 4800
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__interface_8h_1aedd530a6c2c0e70a2c78625053a6376a';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_BAUDRATE_9600';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(103)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      define-mem-desc-line = '36';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+UART Baud Rate of 9600
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__interface_8h_1a42ed79b93dca93ac10e89065cd2e8272';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_BAUDRATE_19200';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(51)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      define-mem-desc-line = '42';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+UART Baud Rate of 19200
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__interface_8h_1a36fa2b18212cf0d03c9d246c0b6d76e1';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_BAUDRATE_115200';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(8)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      define-mem-desc-line = '48';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+UART Baud Rate of 115200
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__interface_8h_1a0895a694122a7a25af56db2376a96546';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_baudRate';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      func-mem-desc-line = '60';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing the UART module with specific baud rate.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_baudRate   Variable to determine which baud rate the UART should be running on
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__interface_8h_1a82dd57524f5a2eb8bde94bc72c58d465';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_sendByte';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_dataByte';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      func-mem-desc-line = '68';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending one byte of data over the UART peripheral.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_dataByte Specific 1-byte value to be sent over the UART module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__interface_8h_1aca542ad8d2a745f1179ca8a097107c54';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_sendStream';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_dataStream';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_dataSize';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      func-mem-desc-line = '77';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending stream of data bytes over the UART peripheral.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_dataStream Stream of 1-bytes items each to be sent over the UART module
+@param au8_dataSize   Size of the stream to be sent over the UART module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__interface_8h_1a644a370ac0cb260f8fa1c28c66c63fe6';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_dataExists';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      func-mem-desc-line = '84';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for checking whether there is a received data or not.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return   1 if there is a new unread data exists, 0 otherwise
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__interface_8h_1af857bb6b4ffa01f6fdc31cfd89de7dbc';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_recvByte';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_dataByte';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+      func-mem-desc-line = '92';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for receiving one byte of data over the UART peripheral.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_dataByte   Pointer to store the received 1-byte data over the UART module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_interface.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the interfacing information of UART Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_u_a_r_t__private_8h';
+  file-name = 'MUART_private.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__private_8h_1a8c7918aaa778e3e44de96fbba9b989e0';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_UDR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x2C))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_private.h';
+      define-mem-desc-line = '23';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to UDR's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__private_8h_1aa66a1419432feafd51da07598c49d468';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_UBRRH';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x40))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_private.h';
+      define-mem-desc-line = '29';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to UBRRH's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__private_8h_1ade2047e1d79940b97a6fc801f042141d';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_UBRRL';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x29))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_private.h';
+      define-mem-desc-line = '35';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to UBRRL's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__private_8h_1ace3531cda45d477e2af621f5f27b58a0';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_UCSRA';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x2B))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_private.h';
+      define-mem-desc-line = '41';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to UCSRA's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__private_8h_1a69abce101f7999840c9cadb0ad1649b4';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_UCSRB';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x2A))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_private.h';
+      define-mem-desc-line = '47';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to UCSRB's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__private_8h_1a7f79b631c5a768dd96be8b96d9bad07c';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MUART_UCSRC';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(*(volatile u8_t*) (0x40))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_private.h';
+      define-mem-desc-line = '53';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Pointer to UCSRC's address in the memory
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_private.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the private information of UART Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_m_u_a_r_t__program_8c';
+  file-name = 'MUART_program.c';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__program_8c_1a43bafb28b29491ec7f871319b5a3b2f8';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'F_CPU';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+16000000UL
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_program.c';
+      define-mem-desc-line = '22';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+CPU's Oscillator
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_m_u_a_r_t__program_8c_1a8032a941e3dca02cdfade5cc3cfe1dc6';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'TIMEOUT_DELAY';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+10
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_program.c';
+      define-mem-desc-line = '33';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Timeout Delay macro
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__program_8c_1a0895a694122a7a25af56db2376a96546';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_baudRate';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_program.c';
+      func-mem-desc-line = '38';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for initializing the UART module with specific baud rate.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_baudRate   Variable to determine which baud rate the UART should be running on
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__program_8c_1a82dd57524f5a2eb8bde94bc72c58d465';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_sendByte';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_dataByte';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_program.c';
+      func-mem-desc-line = '56';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending one byte of data over the UART peripheral.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param au8_dataByte Specific 1-byte value to be sent over the UART module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__program_8c_1aca542ad8d2a745f1179ca8a097107c54';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_sendStream';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_dataStream';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'au8_dataSize';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_program.c';
+      func-mem-desc-line = '87';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for sending stream of data bytes over the UART peripheral.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_dataStream Stream of 1-bytes items each to be sent over the UART module
+@param au8_dataSize   Size of the stream to be sent over the UART module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__program_8c_1a644a370ac0cb260f8fa1c28c66c63fe6';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+u8_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_dataExists';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_program.c';
+      func-mem-desc-line = '103';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for checking whether there is a received data or not.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return   1 if there is a new unread data exists, 0 otherwise
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_m_u_a_r_t__program_8c_1af857bb6b4ffa01f6fdc31cfd89de7dbc';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'muart_recvByte';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pu8_dataByte';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_program.c';
+      func-mem-desc-line = '108';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function is responsible for receiving one byte of data over the UART peripheral.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param pu8_dataByte   Pointer to store the received 1-byte data over the UART module
+
+@return   void
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'D:/Working Directory/Smart_Home/Smart_Home/MCAL/UART/MUART_program.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the logical operations of UART Module.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author  Mohamed Alaa
+@date    2021/04/06
+
+@copyright Copyright (c) 2021
+_EnD_oF_dEf_TeXt_;
+}; /* file */

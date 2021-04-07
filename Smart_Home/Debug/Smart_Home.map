@@ -7,35 +7,25 @@ Discarded input sections
 
  .data          0x00000000        0x0 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
  .bss           0x00000000        0x0 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .text          0x00000000        0x0 APP/ASMH_progran.o
- .data          0x00000000        0x0 APP/ASMH_progran.o
- .bss           0x00000000        0x0 APP/ASMH_progran.o
+ .text          0x00000000        0x0 APP/ASMH_program.o
+ .data          0x00000000        0x0 APP/ASMH_program.o
+ .bss           0x00000000        0x0 APP/ASMH_program.o
  .text.asmh_slaveSPIrecvCmd
-                0x00000000        0xa APP/ASMH_progran.o
+                0x00000000        0xa APP/ASMH_program.o
+ .text.asmh_slaveProcessRecvData
+                0x00000000       0x4c APP/ASMH_program.o
  .text          0x00000000        0x0 HAL/BTH/HBTH_program.o
  .data          0x00000000        0x0 HAL/BTH/HBTH_program.o
  .bss           0x00000000        0x0 HAL/BTH/HBTH_program.o
  .text          0x00000000        0x0 HAL/LED/HLED_program.o
  .data          0x00000000        0x0 HAL/LED/HLED_program.o
  .bss           0x00000000        0x0 HAL/LED/HLED_program.o
- .text.hled_init
-                0x00000000       0x22 HAL/LED/HLED_program.o
  .text.hled_turnOnLED
                 0x00000000       0x22 HAL/LED/HLED_program.o
  .text.hled_turnOffLED
                 0x00000000       0x22 HAL/LED/HLED_program.o
  .text.hled_toggleLED
                 0x00000000       0x1e HAL/LED/HLED_program.o
- .debug_info    0x00000000      0x20a HAL/LED/HLED_program.o
- .debug_abbrev  0x00000000       0x8d HAL/LED/HLED_program.o
- .debug_loc     0x00000000       0xe8 HAL/LED/HLED_program.o
- .debug_aranges
-                0x00000000       0x38 HAL/LED/HLED_program.o
- .debug_ranges  0x00000000       0x28 HAL/LED/HLED_program.o
- .debug_line    0x00000000      0x112 HAL/LED/HLED_program.o
- .debug_str     0x00000000      0x1d1 HAL/LED/HLED_program.o
- .comment       0x00000000       0x31 HAL/LED/HLED_program.o
- .debug_frame   0x00000000       0x54 HAL/LED/HLED_program.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -92,7 +82,7 @@ user_signatures  0x00850000         0x00000400         rw !x
 Linker script and memory map
 
 LOAD D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
-LOAD APP/ASMH_progran.o
+LOAD APP/ASMH_program.o
 LOAD HAL/BTH/HBTH_program.o
 LOAD HAL/LED/HLED_program.o
 LOAD main.o
@@ -208,7 +198,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x26c
+.text           0x00000000      0x2a2
  *(.vectors)
  .vectors       0x00000000       0x54 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
                 0x00000000                __vector_default
@@ -287,48 +277,53 @@ END GROUP
                 0x0000006c                . = ALIGN (0x2)
  *(.text.*)
  .text.asmh_initSpi
-                0x0000006c       0x5c APP/ASMH_progran.o
-                0x0000006c                asmh_initSpi
+                0x0000006c       0x52 APP/ASMH_program.o
+ .text.asmh_initApp
+                0x000000be       0x22 APP/ASMH_program.o
+                0x000000be                asmh_initApp
  .text.asmh_masterBTHRecvCmd
-                0x000000c8        0x6 APP/ASMH_progran.o
-                0x000000c8                asmh_masterBTHRecvCmd
+                0x000000e0        0x6 APP/ASMH_program.o
+                0x000000e0                asmh_masterBTHRecvCmd
  .text.asmh_masterSPISendCmd
-                0x000000ce        0xa APP/ASMH_progran.o
-                0x000000ce                asmh_masterSPISendCmd
+                0x000000e6        0xa APP/ASMH_program.o
+                0x000000e6                asmh_masterSPISendCmd
  .text.hbth_init
-                0x000000d8       0x1c HAL/BTH/HBTH_program.o
-                0x000000d8                hbth_init
+                0x000000f0       0x1c HAL/BTH/HBTH_program.o
+                0x000000f0                hbth_init
  .text.hbth_dataExists
-                0x000000f4        0x6 HAL/BTH/HBTH_program.o
-                0x000000f4                hbth_dataExists
+                0x0000010c        0x6 HAL/BTH/HBTH_program.o
+                0x0000010c                hbth_dataExists
  .text.hbth_recvCmd
-                0x000000fa        0x6 HAL/BTH/HBTH_program.o
-                0x000000fa                hbth_recvCmd
- .text.main     0x00000100       0x30 main.o
-                0x00000100                main
+                0x00000112        0x6 HAL/BTH/HBTH_program.o
+                0x00000112                hbth_recvCmd
+ .text.hled_init
+                0x00000118       0x22 HAL/LED/HLED_program.o
+                0x00000118                hled_init
+ .text.main     0x0000013a       0x2c main.o
+                0x0000013a                main
  .text.mdio_setPinStatus
-                0x00000130       0xd2 MCAL/GPIO/MDIO_program.o
-                0x00000130                mdio_setPinStatus
+                0x00000166       0xd2 MCAL/GPIO/MDIO_program.o
+                0x00000166                mdio_setPinStatus
  .text.mspi_init
-                0x00000202       0x16 MCAL/SPI/MSPI_program.o
-                0x00000202                mspi_init
+                0x00000238       0x16 MCAL/SPI/MSPI_program.o
+                0x00000238                mspi_init
  .text.mspi_masterSendRecvByte
-                0x00000218       0x20 MCAL/SPI/MSPI_program.o
-                0x00000218                mspi_masterSendRecvByte
+                0x0000024e       0x20 MCAL/SPI/MSPI_program.o
+                0x0000024e                mspi_masterSendRecvByte
  .text.muart_init
-                0x00000238        0xe MCAL/UART/MUART_program.o
-                0x00000238                muart_init
+                0x0000026e        0xe MCAL/UART/MUART_program.o
+                0x0000026e                muart_init
  .text.muart_dataExists
-                0x00000246        0xa MCAL/UART/MUART_program.o
-                0x00000246                muart_dataExists
+                0x0000027c        0xa MCAL/UART/MUART_program.o
+                0x0000027c                muart_dataExists
  .text.muart_recvByte
-                0x00000250       0x18 MCAL/UART/MUART_program.o
-                0x00000250                muart_recvByte
-                0x00000268                . = ALIGN (0x2)
+                0x00000286       0x18 MCAL/UART/MUART_program.o
+                0x00000286                muart_recvByte
+                0x0000029e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000268        0x0 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000268                _exit
-                0x00000268                exit
+ .fini9         0x0000029e        0x0 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000029e                _exit
+                0x0000029e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -347,11 +342,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000268        0x4 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000029e        0x4 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000026c                _etext = .
+                0x000002a2                _etext = .
 
-.data           0x00800060        0x0 load address 0x0000026c
+.data           0x00800060        0x0 load address 0x000002a2
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -369,8 +364,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x0000026c                __data_load_start = LOADADDR (.data)
-                0x0000026c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000002a2                __data_load_start = LOADADDR (.data)
+                0x000002a2                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800060        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -418,9 +413,10 @@ END GROUP
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 APP/ASMH_progran.o
+ .comment       0x00000000       0x30 APP/ASMH_program.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 HAL/BTH/HBTH_program.o
+ .comment       0x00000030       0x31 HAL/LED/HLED_program.o
  .comment       0x00000030       0x31 main.o
  .comment       0x00000030       0x31 MCAL/GPIO/MDIO_program.o
  .comment       0x00000030       0x31 MCAL/SPI/MSPI_program.o
@@ -446,87 +442,96 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x130
+.debug_aranges  0x00000000      0x178
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x38 APP/ASMH_progran.o
+                0x00000000       0x48 APP/ASMH_program.o
  .debug_aranges
-                0x00000038       0x30 HAL/BTH/HBTH_program.o
+                0x00000048       0x30 HAL/BTH/HBTH_program.o
  .debug_aranges
-                0x00000068       0x20 main.o
+                0x00000078       0x38 HAL/LED/HLED_program.o
  .debug_aranges
-                0x00000088       0x38 MCAL/GPIO/MDIO_program.o
+                0x000000b0       0x20 main.o
  .debug_aranges
-                0x000000c0       0x30 MCAL/SPI/MSPI_program.o
+                0x000000d0       0x38 MCAL/GPIO/MDIO_program.o
  .debug_aranges
-                0x000000f0       0x40 MCAL/UART/MUART_program.o
+                0x00000108       0x30 MCAL/SPI/MSPI_program.o
+ .debug_aranges
+                0x00000138       0x40 MCAL/UART/MUART_program.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xf82
+.debug_info     0x00000000     0x1290
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_info    0x000004e6      0x29a APP/ASMH_progran.o
- .debug_info    0x00000780      0x174 HAL/BTH/HBTH_program.o
- .debug_info    0x000008f4      0x12a main.o
- .debug_info    0x00000a1e      0x17e MCAL/GPIO/MDIO_program.o
- .debug_info    0x00000b9c      0x1e3 MCAL/SPI/MSPI_program.o
- .debug_info    0x00000d7f      0x203 MCAL/UART/MUART_program.o
+ .debug_info    0x000004e6      0x3b4 APP/ASMH_program.o
+ .debug_info    0x0000089a      0x174 HAL/BTH/HBTH_program.o
+ .debug_info    0x00000a0e      0x20a HAL/LED/HLED_program.o
+ .debug_info    0x00000c18      0x114 main.o
+ .debug_info    0x00000d2c      0x17e MCAL/GPIO/MDIO_program.o
+ .debug_info    0x00000eaa      0x1e3 MCAL/SPI/MSPI_program.o
+ .debug_info    0x0000108d      0x203 MCAL/UART/MUART_program.o
 
-.debug_abbrev   0x00000000      0x97e
+.debug_abbrev   0x00000000      0xa48
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_abbrev  0x000004a3       0x96 APP/ASMH_progran.o
- .debug_abbrev  0x00000539       0xbd HAL/BTH/HBTH_program.o
- .debug_abbrev  0x000005f6       0x9d main.o
- .debug_abbrev  0x00000693       0x9e MCAL/GPIO/MDIO_program.o
- .debug_abbrev  0x00000731      0x107 MCAL/SPI/MSPI_program.o
- .debug_abbrev  0x00000838      0x146 MCAL/UART/MUART_program.o
+ .debug_abbrev  0x000004a3       0xd3 APP/ASMH_program.o
+ .debug_abbrev  0x00000576       0xbd HAL/BTH/HBTH_program.o
+ .debug_abbrev  0x00000633       0x8d HAL/LED/HLED_program.o
+ .debug_abbrev  0x000006c0       0x9d main.o
+ .debug_abbrev  0x0000075d       0x9e MCAL/GPIO/MDIO_program.o
+ .debug_abbrev  0x000007fb      0x107 MCAL/SPI/MSPI_program.o
+ .debug_abbrev  0x00000902      0x146 MCAL/UART/MUART_program.o
 
-.debug_line     0x00000000      0x9a0
+.debug_line     0x00000000      0xb60
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_line    0x00000116      0x135 APP/ASMH_progran.o
- .debug_line    0x0000024b       0xe6 HAL/BTH/HBTH_program.o
- .debug_line    0x00000331       0xb5 main.o
- .debug_line    0x000003e6      0x256 MCAL/GPIO/MDIO_program.o
- .debug_line    0x0000063c      0x17b MCAL/SPI/MSPI_program.o
- .debug_line    0x000007b7      0x1e9 MCAL/UART/MUART_program.o
+ .debug_line    0x00000116      0x1e9 APP/ASMH_program.o
+ .debug_line    0x000002ff       0xe6 HAL/BTH/HBTH_program.o
+ .debug_line    0x000003e5      0x112 HAL/LED/HLED_program.o
+ .debug_line    0x000004f7       0xaf main.o
+ .debug_line    0x000005a6      0x256 MCAL/GPIO/MDIO_program.o
+ .debug_line    0x000007fc      0x17b MCAL/SPI/MSPI_program.o
+ .debug_line    0x00000977      0x1e9 MCAL/UART/MUART_program.o
 
-.debug_frame    0x00000000      0x1e8
+.debug_frame    0x00000000      0x264
  *(.debug_frame)
- .debug_frame   0x00000000       0x54 APP/ASMH_progran.o
- .debug_frame   0x00000054       0x44 HAL/BTH/HBTH_program.o
- .debug_frame   0x00000098       0x34 main.o
- .debug_frame   0x000000cc       0x54 MCAL/GPIO/MDIO_program.o
- .debug_frame   0x00000120       0x44 MCAL/SPI/MSPI_program.o
- .debug_frame   0x00000164       0x84 MCAL/UART/MUART_program.o
+ .debug_frame   0x00000000       0x7c APP/ASMH_program.o
+ .debug_frame   0x0000007c       0x44 HAL/BTH/HBTH_program.o
+ .debug_frame   0x000000c0       0x54 HAL/LED/HLED_program.o
+ .debug_frame   0x00000114       0x34 main.o
+ .debug_frame   0x00000148       0x54 MCAL/GPIO/MDIO_program.o
+ .debug_frame   0x0000019c       0x44 MCAL/SPI/MSPI_program.o
+ .debug_frame   0x000001e0       0x84 MCAL/UART/MUART_program.o
 
-.debug_str      0x00000000      0x5f1
+.debug_str      0x00000000      0x682
  *(.debug_str)
  .debug_str     0x00000000      0x196 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_str     0x00000196      0x1f3 APP/ASMH_progran.o
-                                0x21a (size before relaxing)
- .debug_str     0x00000389       0x6c HAL/BTH/HBTH_program.o
+ .debug_str     0x00000196      0x26c APP/ASMH_program.o
+                                0x293 (size before relaxing)
+ .debug_str     0x00000402       0x62 HAL/BTH/HBTH_program.o
                                 0x1cb (size before relaxing)
- .debug_str     0x000003f5       0x1d main.o
-                                0x1b0 (size before relaxing)
- .debug_str     0x00000412       0x7e MCAL/GPIO/MDIO_program.o
+ .debug_str     0x00000464       0x47 HAL/LED/HLED_program.o
+                                0x1d1 (size before relaxing)
+ .debug_str     0x000004ab       0x1d main.o
+                                0x1a6 (size before relaxing)
+ .debug_str     0x000004c8       0x59 MCAL/GPIO/MDIO_program.o
                                 0x1d0 (size before relaxing)
- .debug_str     0x00000490       0xd5 MCAL/SPI/MSPI_program.o
+ .debug_str     0x00000521       0xd5 MCAL/SPI/MSPI_program.o
                                 0x267 (size before relaxing)
- .debug_str     0x00000565       0x8c MCAL/UART/MUART_program.o
+ .debug_str     0x000005f6       0x8c MCAL/UART/MUART_program.o
                                 0x277 (size before relaxing)
 
-.debug_loc      0x00000000      0xa7f
+.debug_loc      0x00000000      0xc76
  *(.debug_loc)
- .debug_loc     0x00000000       0xb7 APP/ASMH_progran.o
- .debug_loc     0x000000b7       0x26 HAL/BTH/HBTH_program.o
- .debug_loc     0x000000dd       0x48 main.o
- .debug_loc     0x00000125      0x679 MCAL/GPIO/MDIO_program.o
- .debug_loc     0x0000079e      0x120 MCAL/SPI/MSPI_program.o
- .debug_loc     0x000008be      0x1c1 MCAL/UART/MUART_program.o
+ .debug_loc     0x00000000      0x1c6 APP/ASMH_program.o
+ .debug_loc     0x000001c6       0x26 HAL/BTH/HBTH_program.o
+ .debug_loc     0x000001ec       0xe8 HAL/LED/HLED_program.o
+ .debug_loc     0x000002d4       0x48 main.o
+ .debug_loc     0x0000031c      0x679 MCAL/GPIO/MDIO_program.o
+ .debug_loc     0x00000995      0x120 MCAL/SPI/MSPI_program.o
+ .debug_loc     0x00000ab5      0x1c1 MCAL/UART/MUART_program.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -546,14 +551,15 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xd0
+.debug_ranges   0x00000000      0x108
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x28 APP/ASMH_progran.o
- .debug_ranges  0x00000028       0x20 HAL/BTH/HBTH_program.o
- .debug_ranges  0x00000048       0x10 main.o
- .debug_ranges  0x00000058       0x28 MCAL/GPIO/MDIO_program.o
- .debug_ranges  0x00000080       0x20 MCAL/SPI/MSPI_program.o
- .debug_ranges  0x000000a0       0x30 MCAL/UART/MUART_program.o
+ .debug_ranges  0x00000000       0x38 APP/ASMH_program.o
+ .debug_ranges  0x00000038       0x20 HAL/BTH/HBTH_program.o
+ .debug_ranges  0x00000058       0x28 HAL/LED/HLED_program.o
+ .debug_ranges  0x00000080       0x10 main.o
+ .debug_ranges  0x00000090       0x28 MCAL/GPIO/MDIO_program.o
+ .debug_ranges  0x000000b8       0x20 MCAL/SPI/MSPI_program.o
+ .debug_ranges  0x000000d8       0x30 MCAL/UART/MUART_program.o
 
 .debug_macro
  *(.debug_macro)

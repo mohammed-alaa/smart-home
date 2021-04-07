@@ -1,9 +1,12 @@
-/*****************************************************************************/
-/* File name: MSPI_program.c                                                 */
-/* Author: Mohamed Alaa                                                      */
-/* Description: This file contains the logical operations of SPI Module      */
-/* Date: 3/10/2021                                                           */
-/*****************************************************************************/
+/**
+ * @file    MSPI_program.c
+ * @author  Mohamed Alaa
+ * @brief   This file contains the logical operations of SPI Module
+ * @date    2021/04/06
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
 
 /************************************************************************/
 /*                             Includes                                 */
@@ -13,6 +16,10 @@
 #include "LSTD_TYPES.h"
 #include "MSPI_private.h"
 #include "MSPI_interface.h"
+/*!
+  \def	F_CPU
+  CPU's Oscillator
+*/
 #define F_CPU 16000000UL
 #include "util/delay.h"
 
@@ -20,6 +27,10 @@
 /*                         Important macros                             */
 /************************************************************************/
 
+/*!
+  \def	TIMEOUT_DELAY
+  Timeout Delay macro
+*/
 #define TIMEOUT_DELAY (100)
 
 /************************************************************************/

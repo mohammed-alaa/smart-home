@@ -1,12 +1,26 @@
+/**
+ * @file    main.c
+ * @author  Mohamed Alaa
+ * @brief   This is the main source file which is responsible for running the whole project
+ * @date    2021/04/06
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
+
 #include "LSTD_TYPES.h"
 #include "LBIT_MATH.h"
 #include "HBTH_interface.h"
-#include "HLED_interface.h"
 #include "ASMH_interface.h"
 
 /* Uncomment below line/macro if the compiled version is going to be for the MASTER microcontroller */
-#define MASTER_VERSION
+//#define MASTER_VERSION
 
+/**
+ * @brief  Main function
+ *
+ * @return int 0 on successful execution of the program, anything else on errors
+ */
 int main(void)
 {
 	/* If the output compiled version is going to be for the MASTER microcontroller */
@@ -14,24 +28,15 @@ int main(void)
 		/* A local variable to store the received data over the Bluetooth module */
 		u8_t au8_BthData = 0;
 		
-		/* Initialize Bluetooth module */
-		hbth_init();
-	
-		/* Initialize SPI module as MASTER mode with MSB data mode, sample on rising setup on falling and clock speed by 16 */
-		asmh_initSpi(ASMH_SPIM_MASTER);
+		/* Initialize the application is MASTER mode */
+		asmh_initApp(ASMH_SPIM_MASTER);
 	/* If the output compiled version is going to be for the SLAVE microcontroller */
 	#else
 		/* A local variable to store the received data over the SPI module from the MASTER */
 		u8_t au8_SPIData = 0;
 		
-		/* Initialize the LED1 */
-		hled_init(HLED_LED1);
-		
-		/* Initialize the LED 2 */
-		hled_init(HLED_LED2);
-		
-		/* Initialize SPI module as SLAVE mode with MSB data mode, sample on rising setup on falling and clock speed by 16 */
-		asmh_initSpi(ASMH_SPIM_SLAVE);
+		/* Initialize the application is SLAVE mode */
+		asmh_initApp(ASMH_SPIM_SLAVE);
 	#endif
 	
     while (1)
@@ -56,61 +61,13 @@ int main(void)
 			}
 		/* If the output compiled version is going to be for the SLAVE microcontroller */
 		#else
-			/* Get and store the received data over the SPI module from the MASTER */
+			/* Get and store the received data from the MASTER over the SPI module */
 			asmh_slaveSPIrecvCmd(&au8_SPIData);
 			
-			/* Switch over the received SPI data from the MASTER */
-			switch (au8_SPIData)
-			{
-				/* In case of char a */
-				case 'a':
-					/* Turn on LED1 */
-					hled_turnOnLED(HLED_LED1);
-					
-					/* Break from this case */
-					break;
-				/* In case of char b */
-				case 'b':
-					/* Turn off LED1 */
-					hled_turnOffLED(HLED_LED1);
-					
-					/* Break from this case */
-					break;
-				/* In case of char c */
-				case 'c':
-					/* Turn on LED2 */
-					hled_turnOnLED(HLED_LED2);
-					
-					/* Break from this case */
-					break;
-				/* In case of char d */
-				case 'd':
-					/* Turn off LED2 */
-					hled_turnOffLED(HLED_LED2);
-					
-					/* Break from this case */
-					break;
-				/* In case of char e */
-				case 'e':
-					/* Toggle LED1 */
-					hled_toggleLED(HLED_LED1);
-					
-					/* Break from this case */
-					break;
-				/* In case of char f */
-				case 'f':
-					/* Toggle LED2 */
-					hled_toggleLED(HLED_LED2);
-					
-					/* Break from this case */
-					break;
-				/* Default case */
-				default:
-					/* Break from this case */
-					break;
-			}
+			/* Apply specific action based on the received data from the MASTER over the SPI module*/
+			asmh_slaveProcessRecvData(au8_SPIData);
 			
-			/* Reset the received command over the SPI module from the MASTER so it doesn't cause issues */
+			/* Reset the received command from the MASTER over the SPI module so it doesn't cause issues */
 			au8_SPIData = 0;
 		#endif
     }

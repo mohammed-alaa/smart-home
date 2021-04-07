@@ -1,9 +1,12 @@
-/*****************************************************************************/
-/* File name: MDIO_program.c                                                 */
-/* Author: Mohamed Alaa                                                      */
-/* Description: This file contains the logical operations of DIO Module      */
-/* Date: 30-01-2021                                                          */
-/*****************************************************************************/
+/**
+ * @file    MDIO_program.c
+ * @author  Mohamed Alaa
+ * @brief   This file contains the logical operations of DIO Module
+ * @date    2021/04/06
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
 
 /************************************************************************/
 /*                             Includes                                 */

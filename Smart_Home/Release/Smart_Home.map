@@ -7,23 +7,20 @@ Discarded input sections
 
  .data          0x00000000        0x0 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
  .bss           0x00000000        0x0 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .text          0x00000000        0x0 APP/ASMH_progran.o
- .data          0x00000000        0x0 APP/ASMH_progran.o
- .bss           0x00000000        0x0 APP/ASMH_progran.o
+ .text          0x00000000        0x0 APP/ASMH_program.o
+ .data          0x00000000        0x0 APP/ASMH_program.o
+ .bss           0x00000000        0x0 APP/ASMH_program.o
  .text.asmh_masterBTHRecvCmd
-                0x00000000        0x4 APP/ASMH_progran.o
+                0x00000000        0x4 APP/ASMH_program.o
  .text.asmh_masterSPISendCmd
-                0x00000000        0x8 APP/ASMH_progran.o
+                0x00000000        0x8 APP/ASMH_program.o
  .text          0x00000000        0x0 HAL/BTH/HBTH_program.o
  .data          0x00000000        0x0 HAL/BTH/HBTH_program.o
  .bss           0x00000000        0x0 HAL/BTH/HBTH_program.o
- .text.hbth_init
-                0x00000000       0x1a HAL/BTH/HBTH_program.o
  .text.hbth_dataExists
                 0x00000000        0x4 HAL/BTH/HBTH_program.o
  .text.hbth_recvCmd
                 0x00000000        0x4 HAL/BTH/HBTH_program.o
- .comment       0x00000000       0x31 HAL/BTH/HBTH_program.o
  .text          0x00000000        0x0 HAL/LED/HLED_program.o
  .data          0x00000000        0x0 HAL/LED/HLED_program.o
  .bss           0x00000000        0x0 HAL/LED/HLED_program.o
@@ -43,8 +40,6 @@ Discarded input sections
  .text          0x00000000        0x0 MCAL/UART/MUART_program.o
  .data          0x00000000        0x0 MCAL/UART/MUART_program.o
  .bss           0x00000000        0x0 MCAL/UART/MUART_program.o
- .text.muart_init
-                0x00000000        0xe MCAL/UART/MUART_program.o
  .text.muart_sendByte
                 0x00000000       0x22 MCAL/UART/MUART_program.o
  .text.muart_sendStream
@@ -53,7 +48,6 @@ Discarded input sections
                 0x00000000        0xa MCAL/UART/MUART_program.o
  .text.muart_recvByte
                 0x00000000        0xc MCAL/UART/MUART_program.o
- .comment       0x00000000       0x31 MCAL/UART/MUART_program.o
  .text          0x00000000        0x0 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -86,7 +80,7 @@ user_signatures  0x00850000         0x00000400         rw !x
 Linker script and memory map
 
 LOAD D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
-LOAD APP/ASMH_progran.o
+LOAD APP/ASMH_program.o
 LOAD HAL/BTH/HBTH_program.o
 LOAD HAL/LED/HLED_program.o
 LOAD main.o
@@ -202,7 +196,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x328
+.text           0x00000000      0x368
  *(.vectors)
  .vectors       0x00000000       0x54 D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32a/avr5/crtatmega32a.o
                 0x00000000                __vector_default
@@ -280,47 +274,56 @@ END GROUP
                 0x00000068                __vector_20
                 0x0000006c                . = ALIGN (0x2)
  *(.text.*)
- .text.asmh_initSpi
-                0x0000006c       0x4c APP/ASMH_progran.o
-                0x0000006c                asmh_initSpi
+ .text.asmh_initApp
+                0x0000006c       0x6c APP/ASMH_program.o
+                0x0000006c                asmh_initApp
  .text.asmh_slaveSPIrecvCmd
-                0x000000b8        0x8 APP/ASMH_progran.o
-                0x000000b8                asmh_slaveSPIrecvCmd
+                0x000000d8        0x8 APP/ASMH_program.o
+                0x000000d8                asmh_slaveSPIrecvCmd
+ .text.asmh_slaveProcessRecvData
+                0x000000e0       0x3a APP/ASMH_program.o
+                0x000000e0                asmh_slaveProcessRecvData
+ .text.hbth_init
+                0x0000011a       0x1a HAL/BTH/HBTH_program.o
+                0x0000011a                hbth_init
  .text.hled_init
-                0x000000c0       0x1a HAL/LED/HLED_program.o
-                0x000000c0                hled_init
+                0x00000134       0x1a HAL/LED/HLED_program.o
+                0x00000134                hled_init
  .text.hled_turnOnLED
-                0x000000da       0x1a HAL/LED/HLED_program.o
-                0x000000da                hled_turnOnLED
+                0x0000014e       0x1a HAL/LED/HLED_program.o
+                0x0000014e                hled_turnOnLED
  .text.hled_turnOffLED
-                0x000000f4       0x1a HAL/LED/HLED_program.o
-                0x000000f4                hled_turnOffLED
+                0x00000168       0x1a HAL/LED/HLED_program.o
+                0x00000168                hled_turnOffLED
  .text.hled_toggleLED
-                0x0000010e       0x16 HAL/LED/HLED_program.o
-                0x0000010e                hled_toggleLED
+                0x00000182       0x16 HAL/LED/HLED_program.o
+                0x00000182                hled_toggleLED
  .text.startup.main
-                0x00000124       0x66 main.o
-                0x00000124                main
+                0x00000198       0x24 main.o
+                0x00000198                main
  .text.mdio_setPinStatus
-                0x0000018a       0xca MCAL/GPIO/MDIO_program.o
-                0x0000018a                mdio_setPinStatus
+                0x000001bc       0xca MCAL/GPIO/MDIO_program.o
+                0x000001bc                mdio_setPinStatus
  .text.mdio_setPinValue
-                0x00000254       0x78 MCAL/GPIO/MDIO_program.o
-                0x00000254                mdio_setPinValue
+                0x00000286       0x78 MCAL/GPIO/MDIO_program.o
+                0x00000286                mdio_setPinValue
  .text.mdio_togglePinValue
-                0x000002cc       0x30 MCAL/GPIO/MDIO_program.o
-                0x000002cc                mdio_togglePinValue
+                0x000002fe       0x30 MCAL/GPIO/MDIO_program.o
+                0x000002fe                mdio_togglePinValue
  .text.mspi_init
-                0x000002fc       0x1a MCAL/SPI/MSPI_program.o
-                0x000002fc                mspi_init
+                0x0000032e       0x1a MCAL/SPI/MSPI_program.o
+                0x0000032e                mspi_init
  .text.mspi_slaveSendRecvByte
-                0x00000316        0xe MCAL/SPI/MSPI_program.o
-                0x00000316                mspi_slaveSendRecvByte
-                0x00000324                . = ALIGN (0x2)
+                0x00000348        0xe MCAL/SPI/MSPI_program.o
+                0x00000348                mspi_slaveSendRecvByte
+ .text.muart_init
+                0x00000356        0xe MCAL/UART/MUART_program.o
+                0x00000356                muart_init
+                0x00000364                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000324        0x0 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000324                _exit
-                0x00000324                exit
+ .fini9         0x00000364        0x0 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000364                _exit
+                0x00000364                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -339,11 +342,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000324        0x4 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000364        0x4 d:/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000328                _etext = .
+                0x00000368                _etext = .
 
-.data           0x00800060        0x0 load address 0x00000328
+.data           0x00800060        0x0 load address 0x00000368
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -361,8 +364,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x00000328                __data_load_start = LOADADDR (.data)
-                0x00000328                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000368                __data_load_start = LOADADDR (.data)
+                0x00000368                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800060        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -410,12 +413,14 @@ END GROUP
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 APP/ASMH_progran.o
+ .comment       0x00000000       0x30 APP/ASMH_program.o
                                  0x31 (size before relaxing)
+ .comment       0x00000030       0x31 HAL/BTH/HBTH_program.o
  .comment       0x00000030       0x31 HAL/LED/HLED_program.o
  .comment       0x00000030       0x31 main.o
  .comment       0x00000030       0x31 MCAL/GPIO/MDIO_program.o
  .comment       0x00000030       0x31 MCAL/SPI/MSPI_program.o
+ .comment       0x00000030       0x31 MCAL/UART/MUART_program.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x3c

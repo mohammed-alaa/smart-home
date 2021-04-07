@@ -46,7 +46,7 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../APP/ASMH_progran.c \
+../APP/ASMH_program.c \
 ../HAL/BTH/HBTH_program.c \
 ../HAL/LED/HLED_program.c \
 ../main.c \
@@ -62,7 +62,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-APP/ASMH_progran.o \
+APP/ASMH_program.o \
 HAL/BTH/HBTH_program.o \
 HAL/LED/HLED_program.o \
 main.o \
@@ -71,7 +71,7 @@ MCAL/SPI/MSPI_program.o \
 MCAL/UART/MUART_program.o
 
 OBJS_AS_ARGS +=  \
-APP/ASMH_progran.o \
+APP/ASMH_program.o \
 HAL/BTH/HBTH_program.o \
 HAL/LED/HLED_program.o \
 main.o \
@@ -80,7 +80,7 @@ MCAL/SPI/MSPI_program.o \
 MCAL/UART/MUART_program.o
 
 C_DEPS +=  \
-APP/ASMH_progran.d \
+APP/ASMH_program.d \
 HAL/BTH/HBTH_program.d \
 HAL/LED/HLED_program.d \
 main.d \
@@ -89,7 +89,7 @@ MCAL/SPI/MSPI_program.d \
 MCAL/UART/MUART_program.d
 
 C_DEPS_AS_ARGS +=  \
-APP/ASMH_progran.d \
+APP/ASMH_program.d \
 HAL/BTH/HBTH_program.d \
 HAL/LED/HLED_program.d \
 main.d \
@@ -111,7 +111,7 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-APP/ASMH_progran.o: ../APP/ASMH_progran.c
+APP/ASMH_program.o: ../APP/ASMH_program.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DNDEBUG  -I"D:\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../LIBS" -I"../MCAL/GPIO" -I"../MCAL/SPI" -I"../MCAL/UART" -I"../HAL/BTH" -I"../HAL/LED" -I"../APP"  -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -mmcu=atmega32a -B "D:\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

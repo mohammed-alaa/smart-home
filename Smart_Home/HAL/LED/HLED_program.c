@@ -1,9 +1,12 @@
-/*****************************************************************************/
-/* File name: HLED_program.c                                                 */
-/* Author: Mohamed Alaa                                                      */
-/* Description: This file contains the logical operations of LED Module      */
-/* Date: 4/5/2021                                                          */
-/*****************************************************************************/
+/**
+ * @file    HLED_program.c
+ * @author  Mohamed Alaa
+ * @brief   This file contains the logical operations of LED Module
+ * @date    2021/04/06
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
 
 /************************************************************************/
 /*                             Includes                                 */

@@ -1,0 +1,112 @@
+\hypertarget{_h_l_e_d__program_8c}{}\doxysection{HAL/\+LED/\+HLED\+\_\+program.c File Reference}
+\label{_h_l_e_d__program_8c}\index{HAL/LED/HLED\_program.c@{HAL/LED/HLED\_program.c}}
+
+
+This file contains the logical operations of LED Module.  
+
+
+{\ttfamily \#include \char`\"{}LSTD\+\_\+\+TYPES.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}LBIT\+\_\+\+MATH.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}MDIO\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}HLED\+\_\+private.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}HLED\+\_\+interface.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_l_e_d__program_8c_ab11012d4a4b8bdc1a1df7a44fcdbf72e}{hled\+\_\+init}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+led)
+\begin{DoxyCompactList}\small\item\em This function is responsible for initializing a specific LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_l_e_d__program_8c_a4160d747feec293cbb8d75635c0b718c}{hled\+\_\+turn\+On\+LED}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+led)
+\begin{DoxyCompactList}\small\item\em This function is responsible for turning ON a specific LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_l_e_d__program_8c_a19a79785791ac623d2dc2768716dcbef}{hled\+\_\+turn\+Off\+LED}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+led)
+\begin{DoxyCompactList}\small\item\em This function is responsible for turning OFF a specific LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_l_e_d__program_8c_a76409b5917f8010cc44a7afda4d32cff}{hled\+\_\+toggle\+LED}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+led)
+\begin{DoxyCompactList}\small\item\em This function is responsible for toggling a specific LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the logical operations of LED Module. 
+
+\begin{DoxyAuthor}{Author}
+Mohamed Alaa 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021/04/06
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_h_l_e_d__program_8c_ab11012d4a4b8bdc1a1df7a44fcdbf72e}\label{_h_l_e_d__program_8c_ab11012d4a4b8bdc1a1df7a44fcdbf72e}} 
+\index{HLED\_program.c@{HLED\_program.c}!hled\_init@{hled\_init}}
+\index{hled\_init@{hled\_init}!HLED\_program.c@{HLED\_program.c}}
+\doxysubsubsection{\texorpdfstring{hled\_init()}{hled\_init()}}
+{\footnotesize\ttfamily void hled\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+led }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for initializing a specific LED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+led} & Variable to determine which LED to initialize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_l_e_d__program_8c_a76409b5917f8010cc44a7afda4d32cff}\label{_h_l_e_d__program_8c_a76409b5917f8010cc44a7afda4d32cff}} 
+\index{HLED\_program.c@{HLED\_program.c}!hled\_toggleLED@{hled\_toggleLED}}
+\index{hled\_toggleLED@{hled\_toggleLED}!HLED\_program.c@{HLED\_program.c}}
+\doxysubsubsection{\texorpdfstring{hled\_toggleLED()}{hled\_toggleLED()}}
+{\footnotesize\ttfamily void hled\+\_\+toggle\+LED (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+led }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for toggling a specific LED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+led} & Variable to determine which LED to toggle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_l_e_d__program_8c_a19a79785791ac623d2dc2768716dcbef}\label{_h_l_e_d__program_8c_a19a79785791ac623d2dc2768716dcbef}} 
+\index{HLED\_program.c@{HLED\_program.c}!hled\_turnOffLED@{hled\_turnOffLED}}
+\index{hled\_turnOffLED@{hled\_turnOffLED}!HLED\_program.c@{HLED\_program.c}}
+\doxysubsubsection{\texorpdfstring{hled\_turnOffLED()}{hled\_turnOffLED()}}
+{\footnotesize\ttfamily void hled\+\_\+turn\+Off\+LED (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+led }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for turning OFF a specific LED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+led} & Variable to determine which LED to turn off\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_l_e_d__program_8c_a4160d747feec293cbb8d75635c0b718c}\label{_h_l_e_d__program_8c_a4160d747feec293cbb8d75635c0b718c}} 
+\index{HLED\_program.c@{HLED\_program.c}!hled\_turnOnLED@{hled\_turnOnLED}}
+\index{hled\_turnOnLED@{hled\_turnOnLED}!HLED\_program.c@{HLED\_program.c}}
+\doxysubsubsection{\texorpdfstring{hled\_turnOnLED()}{hled\_turnOnLED()}}
+{\footnotesize\ttfamily void hled\+\_\+turn\+On\+LED (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+led }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for turning ON a specific LED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+led} & Variable to determine which LED to turn on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

@@ -1,0 +1,146 @@
+\hypertarget{_a_s_m_h__interface_8h}{}\doxysection{APP/\+ASMH\+\_\+interface.h File Reference}
+\label{_a_s_m_h__interface_8h}\index{APP/ASMH\_interface.h@{APP/ASMH\_interface.h}}
+
+
+This file contains the interfacing information of Smart Home Application.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_a_s_m_h__interface_8h_a8526e6fa1315017dfd7aa6da48f5b497}{ASMH\+\_\+\+SPIM\+\_\+\+MASTER}}~(0)
+\item 
+\#define \mbox{\hyperlink{_a_s_m_h__interface_8h_a9106c9d88fd25f49924178bf265d1f34}{ASMH\+\_\+\+SPIM\+\_\+\+SLAVE}}~(1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_s_m_h__interface_8h_a82dfc190a0e5802ad58dd5554703c53d}{asmh\+\_\+init\+App}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em This function is responsible for initializing the application module with a specific mode whether MASTER mode or SLAVE mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_s_m_h__interface_8h_abd055088d7eb2ba0a63ab44c0839db92}{asmh\+\_\+master\+BTHRecv\+Cmd}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$pu8\+\_\+data)
+\begin{DoxyCompactList}\small\item\em This function is responsible for receiving command in the MASTER mode over the Bluetooth module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_s_m_h__interface_8h_a7b1de0656855d025debe4193ac3d8a1d}{asmh\+\_\+master\+SPISend\+Cmd}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+cmd)
+\begin{DoxyCompactList}\small\item\em This function is responsible for sending command over the SPI module in the MASTER mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_s_m_h__interface_8h_a8249a148e86764898a7a33f7600d30f2}{asmh\+\_\+slave\+SPIrecv\+Cmd}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$pu8\+\_\+cmd)
+\begin{DoxyCompactList}\small\item\em This function is responsible for receiving command over the SPI module in the SLAVE mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_s_m_h__interface_8h_a5c6b664bb610d4e5bc02608e353f2b79}{asmh\+\_\+slave\+Process\+Recv\+Data}} (\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} au8\+\_\+data)
+\begin{DoxyCompactList}\small\item\em This functions is responsible for processing the received data from the MASTER over the SPI module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the interfacing information of Smart Home Application. 
+
+\begin{DoxyAuthor}{Author}
+Mohamed Alaa 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021/04/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_a_s_m_h__interface_8h_a8526e6fa1315017dfd7aa6da48f5b497}\label{_a_s_m_h__interface_8h_a8526e6fa1315017dfd7aa6da48f5b497}} 
+\index{ASMH\_interface.h@{ASMH\_interface.h}!ASMH\_SPIM\_MASTER@{ASMH\_SPIM\_MASTER}}
+\index{ASMH\_SPIM\_MASTER@{ASMH\_SPIM\_MASTER}!ASMH\_interface.h@{ASMH\_interface.h}}
+\doxysubsubsection{\texorpdfstring{ASMH\_SPIM\_MASTER}{ASMH\_SPIM\_MASTER}}
+{\footnotesize\ttfamily \#define ASMH\+\_\+\+SPIM\+\_\+\+MASTER~(0)}
+
+Indicates that the MASTER mode equals 0 in the SPI module \mbox{\Hypertarget{_a_s_m_h__interface_8h_a9106c9d88fd25f49924178bf265d1f34}\label{_a_s_m_h__interface_8h_a9106c9d88fd25f49924178bf265d1f34}} 
+\index{ASMH\_interface.h@{ASMH\_interface.h}!ASMH\_SPIM\_SLAVE@{ASMH\_SPIM\_SLAVE}}
+\index{ASMH\_SPIM\_SLAVE@{ASMH\_SPIM\_SLAVE}!ASMH\_interface.h@{ASMH\_interface.h}}
+\doxysubsubsection{\texorpdfstring{ASMH\_SPIM\_SLAVE}{ASMH\_SPIM\_SLAVE}}
+{\footnotesize\ttfamily \#define ASMH\+\_\+\+SPIM\+\_\+\+SLAVE~(1)}
+
+Indicates that the SLAVE mode equals 1 in the SPI module 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_s_m_h__interface_8h_a82dfc190a0e5802ad58dd5554703c53d}\label{_a_s_m_h__interface_8h_a82dfc190a0e5802ad58dd5554703c53d}} 
+\index{ASMH\_interface.h@{ASMH\_interface.h}!asmh\_initApp@{asmh\_initApp}}
+\index{asmh\_initApp@{asmh\_initApp}!ASMH\_interface.h@{ASMH\_interface.h}}
+\doxysubsubsection{\texorpdfstring{asmh\_initApp()}{asmh\_initApp()}}
+{\footnotesize\ttfamily void asmh\+\_\+init\+App (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for initializing the application module with a specific mode whether MASTER mode or SLAVE mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+mode} & Variable to determine which mode the application should be initialized in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_s_m_h__interface_8h_abd055088d7eb2ba0a63ab44c0839db92}\label{_a_s_m_h__interface_8h_abd055088d7eb2ba0a63ab44c0839db92}} 
+\index{ASMH\_interface.h@{ASMH\_interface.h}!asmh\_masterBTHRecvCmd@{asmh\_masterBTHRecvCmd}}
+\index{asmh\_masterBTHRecvCmd@{asmh\_masterBTHRecvCmd}!ASMH\_interface.h@{ASMH\_interface.h}}
+\doxysubsubsection{\texorpdfstring{asmh\_masterBTHRecvCmd()}{asmh\_masterBTHRecvCmd()}}
+{\footnotesize\ttfamily void asmh\+\_\+master\+BTHRecv\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$}]{pu8\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for receiving command in the MASTER mode over the Bluetooth module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pu8\+\_\+data} & Pointer to store the received command in the MASTER mode over the Bluetooth module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_s_m_h__interface_8h_a7b1de0656855d025debe4193ac3d8a1d}\label{_a_s_m_h__interface_8h_a7b1de0656855d025debe4193ac3d8a1d}} 
+\index{ASMH\_interface.h@{ASMH\_interface.h}!asmh\_masterSPISendCmd@{asmh\_masterSPISendCmd}}
+\index{asmh\_masterSPISendCmd@{asmh\_masterSPISendCmd}!ASMH\_interface.h@{ASMH\_interface.h}}
+\doxysubsubsection{\texorpdfstring{asmh\_masterSPISendCmd()}{asmh\_masterSPISendCmd()}}
+{\footnotesize\ttfamily void asmh\+\_\+master\+SPISend\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+cmd }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for sending command over the SPI module in the MASTER mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+cmd} & Variable to hold the received command over the Bluetooth module and send it to the SLAVE over the SPI module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_s_m_h__interface_8h_a5c6b664bb610d4e5bc02608e353f2b79}\label{_a_s_m_h__interface_8h_a5c6b664bb610d4e5bc02608e353f2b79}} 
+\index{ASMH\_interface.h@{ASMH\_interface.h}!asmh\_slaveProcessRecvData@{asmh\_slaveProcessRecvData}}
+\index{asmh\_slaveProcessRecvData@{asmh\_slaveProcessRecvData}!ASMH\_interface.h@{ASMH\_interface.h}}
+\doxysubsubsection{\texorpdfstring{asmh\_slaveProcessRecvData()}{asmh\_slaveProcessRecvData()}}
+{\footnotesize\ttfamily void asmh\+\_\+slave\+Process\+Recv\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{au8\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+This functions is responsible for processing the received data from the MASTER over the SPI module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au8\+\_\+data} & Variable to hold the received command over the SPI module from the MASTER and apply specific action(s) based on the received command\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_s_m_h__interface_8h_a8249a148e86764898a7a33f7600d30f2}\label{_a_s_m_h__interface_8h_a8249a148e86764898a7a33f7600d30f2}} 
+\index{ASMH\_interface.h@{ASMH\_interface.h}!asmh\_slaveSPIrecvCmd@{asmh\_slaveSPIrecvCmd}}
+\index{asmh\_slaveSPIrecvCmd@{asmh\_slaveSPIrecvCmd}!ASMH\_interface.h@{ASMH\_interface.h}}
+\doxysubsubsection{\texorpdfstring{asmh\_slaveSPIrecvCmd()}{asmh\_slaveSPIrecvCmd()}}
+{\footnotesize\ttfamily void asmh\+\_\+slave\+SPIrecv\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_l_s_t_d___t_y_p_e_s_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} $\ast$}]{pu8\+\_\+cmd }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for receiving command over the SPI module in the SLAVE mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pu8\+\_\+cmd} & Pointer to store the received command in the SLAVE mode from the MASTER over the SPI module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
