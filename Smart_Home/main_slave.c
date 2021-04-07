@@ -1,5 +1,5 @@
 /**
- * @file    main.c
+ * @file    main_slave.c
  * @author  Mohamed Alaa
  * @brief   This is the main source file which is responsible for running the project in the SLAVE mode
  * @date    2021/04/06
