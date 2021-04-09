@@ -95,8 +95,14 @@ void asmh_masterBTHRecvCmd(u8_t* pu8_cmd)
 
 void asmh_masterSPISendCmd(u8_t au8_cmd)
 {
+	/* Set PA0 (SS) to LOW to enable the SPI */
+	mdio_setPinStatus(PORTA, (PIN0), LOW);
+
 	/* Send the 1-byte data from the MASTER to the SLAVE with ignoring the received data from the SLAVE */
 	mspi_masterSendRecvByte(au8_cmd, 0x00);
+
+	/* Set PA0 (SS) to HIGH to disable the SPI */
+	mdio_setPinStatus(PORTA, (PIN0), HIGH);
 	
 	/* Return from this function */
 	return;
